@@ -3,7 +3,7 @@ THIS_FILE := $(lastword $(MAKEFILE_LIST))
 
 DOTFILES_ROOT="./dotfiles"
 
-install:
+all:
 	@$(MAKE) -f $(THIS_FILE) alias
 	@$(MAKE) -f $(THIS_FILE) terminal
 
@@ -14,7 +14,7 @@ alias:
 
 terminal:
 	echo "cd Desktop/ 2>/dev/null" >> ~/.bashrc # start from desktop
-	echo "$(PWD)/startup/xset.sh" >> ~/.bashrc
-	echo "$(PWD)/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
+	echo "$(PWD)/dotfiles/startup/xset.sh" >> ~/.bashrc
+	echo "$(PWD)/dotfiles/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
 
-.PHONY: install alias terminal
+.PHONY: all alias terminal
