@@ -6,6 +6,7 @@ DOTFILES_ROOT=$(PWD)/dotfiles
 all:
 	@$(MAKE) -f $(THIS_FILE) alias
 	@$(MAKE) -f $(THIS_FILE) terminal
+	@$(MAKE) -f $(THIS_FILE) noserc
 
 alias:
 	cat $(DOTFILES_ROOT)/alias.sh >> ~/.bashrc
@@ -17,4 +18,7 @@ terminal:
 	echo "$(DOTFILES_ROOT)/startup/xset.sh" >> ~/.bashrc
 	echo "$(DOTFILES_ROOT)/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
 
-.PHONY: all alias terminal
+noserc:
+	cp $(DOTFILES_ROOT)/.noserc ~
+
+.PHONY: all alias terminal noserc
