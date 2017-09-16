@@ -1,7 +1,7 @@
 # need to be able to call other targets within given one
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
 
-DOTFILES_ROOT="./dotfiles"
+DOTFILES_ROOT=$(PWD)/dotfiles
 
 all:
 	@$(MAKE) -f $(THIS_FILE) alias
@@ -14,7 +14,7 @@ alias:
 
 terminal:
 	echo "cd Desktop/ 2>/dev/null" >> ~/.bashrc # start from desktop
-	echo "$(PWD)/dotfiles/startup/xset.sh" >> ~/.bashrc
-	echo "$(PWD)/dotfiles/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
+	echo "$(DOTFILES_ROOT)/startup/xset.sh" >> ~/.bashrc
+	echo "$(DOTFILES_ROOT)/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
 
 .PHONY: all alias terminal
