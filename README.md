@@ -4,13 +4,9 @@ Get the repository
 ```bash
 git clone git@github.com:monsta-hd/dotfiles.git
 ```
-Config all by running
+Install (all by default)
 ```bash
-make
-```
-Or selectively by running
-```bash
-make {alias|terminal}
+make [alias|terminal]
 ```
 
 ## Manuals
