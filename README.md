@@ -1,7 +1,12 @@
 # dotfiles
 ## How to install
+Get the repository
 ```bash
 git clone git@github.com:monsta-hd/dotfiles.git
+```
+Install (all by default)
+```bash
+make [alias|terminal]
 ```
 
 ## Manuals
