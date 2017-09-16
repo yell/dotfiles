@@ -6,7 +6,7 @@ git clone git@github.com:monsta-hd/dotfiles.git
 ```
 Install (all by default)
 ```bash
-make [alias|terminal]
+make [alias|terminal|noserc]
 ```
 Run `crontab -e` and copy this
 ```bash
