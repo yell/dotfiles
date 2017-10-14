@@ -15,13 +15,3 @@ Run `crontab -e` and copy this
 @reboot sleep 15 && ~/dotfiles/dotfiles/startup/redshift.sh
 @reboot ~/dotfiles/dotfiles/startup/xset.sh
 ```
-
-## Manuals
-#### Alias syntax (for current session)
-```bash
-alias # show current aliases
-alias p="pwd"
-\p # disable temporarily
-alias pl='p; ls' # multiple commands (or other aliases)
-unalias p
-```
