@@ -61,3 +61,6 @@ alias gs='git status'
 alias gl='git log'
 alias gpull='git pull'
 alias gpush='git push'
+
+## gpu
+alias ns='nvidia-smi'
