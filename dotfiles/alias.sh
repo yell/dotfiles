@@ -64,3 +64,7 @@ alias gpush='git push'
 
 ## gpu
 alias ns='nvidia-smi'
+
+## custom scripts
+alias hide-icons='gsettings set org.gnome.desktop.background show-desktop-icons false'
+alias show-icons='gsettings set org.gnome.desktop.background show-desktop-icons true'
