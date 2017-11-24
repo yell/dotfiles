@@ -1,0 +1,3 @@
+[
+	{ "keys": ["f10"], "command": "indent_respectful_sort", "args": {"indent": "\t", "maxDepth": 10} },
+]
