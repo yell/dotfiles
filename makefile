@@ -17,6 +17,7 @@ terminal:
 	echo "cd Desktop/ 2>/dev/null" >> ~/.bashrc # start from desktop
 	echo "$(DOTFILES_ROOT)/startup/xset.sh" >> ~/.bashrc
 	echo "$(DOTFILES_ROOT)/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
+	echo "sudo dhclient -v wlp3s0" >> ~/.bashrc
 
 noserc:
 	cp $(DOTFILES_ROOT)/.noserc ~
