@@ -1,4 +1,4 @@
-TARGETS = $(shell find . -mindepth 1 -maxdepth 1 -type d)
+TARGETS = $(shell find . -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
 
 all: $(TARGETS)
 
