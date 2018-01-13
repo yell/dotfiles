@@ -11,7 +11,7 @@ cd dotfiles/
 ```bash
 make
 ```
-**or** install specific dotfiles by running corresponding makefile, e.g.
+&nbsp; &nbsp; **or** install specific dotfiles by running corresponding makefile, e.g.
 ```bash
 cd alias/ && make && cd ..
 ```
