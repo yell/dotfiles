@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Todoist
+Exec=/snap/bin/todoist-thibaut.todoist
+Icon=/home/monsta/Desktop/monsta/multimedia/imgs/icons/todo/unnamed.png
+StartupWMClass=Todoist
+Terminal=false
