@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Whatever
+Comment=An unofficial Evernote client for Linux desktop
+Exec="/opt/Whatever/whatever"
+Terminal=false
+Type=Application
+Icon=/home/monsta/Desktop/monsta/multimedia/imgs/icons/social/1466964837__Evernote.png
+Name[en_US]=whatever.desktop
