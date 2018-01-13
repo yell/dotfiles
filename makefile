@@ -1,25 +1,8 @@
-# need to be able to call other targets within given one
-THIS_FILE := $(lastword $(MAKEFILE_LIST))
+TARGETS = $(shell find . -mindepth 1 -maxdepth 1 -type d)
 
-DOTFILES_ROOT=$(PWD)/dotfiles
+all: $(TARGETS)
 
-all:
-	@$(MAKE) -f $(THIS_FILE) alias
-	@$(MAKE) -f $(THIS_FILE) terminal
-	@$(MAKE) -f $(THIS_FILE) noserc
+$(TARGETS):
+	@$(MAKE) -C $@;
 
-alias:
-	cat $(DOTFILES_ROOT)/alias.sh >> ~/.bashrc
-	cat $(DOTFILES_ROOT)/alias.sh | sudo tee -a /root/.bashrc >/dev/null
-	cat $(DOTFILES_ROOT)/alias.sh | sudo tee -a /etc/.bashrc >/dev/null
-
-terminal:
-	echo "cd Desktop/ 2>/dev/null" >> ~/.bashrc # start from desktop
-	echo "$(DOTFILES_ROOT)/startup/xset.sh" >> ~/.bashrc
-	echo "$(DOTFILES_ROOT)/startup/redshift.sh 1>/dev/null" >> ~/.bashrc
-	echo "sudo dhclient -v wlp3s0" >> ~/.bashrc
-
-noserc:
-	cp $(DOTFILES_ROOT)/.noserc ~
-
-.PHONY: all alias terminal noserc
+.PHONY: all $(TARGETS)
