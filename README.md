@@ -3,15 +3,15 @@
 Get the repository
 ```bash
 git clone git@github.com:monsta-hd/dotfiles.git
+cd dotfiles/
 ```
-Install (all by default)
+## How to run
+* Fill `password.txt`
+* Install all dotfiles by running
 ```bash
-make [alias|terminal|noserc]
+make
 ```
-Run `crontab -e` and copy this
+**or** install specific dotfiles by running corresponding makefile, e.g.
 ```bash
-@reboot echo <PASSWD> | sudo -S ~/dotfiles/dotfiles/startup/sudo_init_cuda.sh
-@reboot echo <PASSWD> | sudo -S ~/dotfiles/dotfiles/startup/sudo_rm_crash.sh
-@reboot sleep 15 && ~/dotfiles/dotfiles/startup/redshift.sh
-@reboot ~/dotfiles/dotfiles/startup/xset.sh
+cd alias/ && make && cd ..
 ```
