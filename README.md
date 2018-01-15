@@ -6,7 +6,7 @@ git clone git@github.com:monsta-hd/dotfiles.git
 cd dotfiles/
 ```
 ## How to run
-* Fill `password.txt`
+* Fill `password.txt` (needed for some `_startup` commands)
 * Install all dotfiles by running
 ```bash
 make
@@ -15,3 +15,7 @@ make
 ```bash
 cd alias/ && make && cd ..
 ```
+## Similar projects
+***TODO***:
+* add similar projects
+* add sorting by stargazers script
