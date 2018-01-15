@@ -18,4 +18,4 @@ cd alias/ && make && cd ..
 ## Similar projects
 ***TODO***:
 * add similar projects
-* add sorting by stargazers script
+* add sorting by stargazers script + automatically update number of stars
