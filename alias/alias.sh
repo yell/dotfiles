@@ -71,3 +71,4 @@ alias show-icons='gsettings set org.gnome.desktop.background show-desktop-icons 
 alias peek='PEEK_POSTPROCESSOR=gifski peek'
 alias init-cuda='sudo ~/NVIDIA_CUDA-8.0_Samples/1_Utilities/deviceQuery/deviceQuery'
 alias rm-crash='sudo rm -rf /var/crash/*'
+alias v='source .venv/bin/activate'
