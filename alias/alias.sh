@@ -67,6 +67,7 @@ alias push='git push'
 ## gpu
 alias ns='nvidia-smi'
 alias nsl='nvidia-smi -lms'
+alias wn='watch -n 2 nvidia-smi'
 
 ## custom scripts
 alias hide-icons='gsettings set org.gnome.desktop.background show-desktop-icons false'
