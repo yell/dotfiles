@@ -57,6 +57,7 @@ alias ln='ln -i' # ^^
 alias ga='git add'
 alias gc='git commit -m'
 alias gd='git diff'
+alias gdiff='git diff'
 alias gs='git status'
 alias gl='git log'
 alias gpull='git pull'
