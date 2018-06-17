@@ -1,4 +1,4 @@
 all: 
-	cat $(PWD)/bashrc.sh >> ~/.bashrc
+	cat bashrc.sh >> ~/.bashrc
 
 .PHONY: all
