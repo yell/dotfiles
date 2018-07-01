@@ -1,8 +1,8 @@
 ## general shortcuts
 alias a='sudo apt-get'
-alias c='clear' # clear screen
+alias c='clear'  # clear screen
 alias df='df -H'
-alias du='s du -sbh' # size
+alias du='s du -sbh'  # size
 alias g='grep'
 alias h='history'
 alias ins='a install'
@@ -15,18 +15,6 @@ alias su='sudo -i'
 alias sz='du'
 alias reboot='s reboot'
 alias root='sudo -i'
-
-## python
-alias p='python'
-alias p2='p'
-alias py='p'
-alias py2='p'
-alias p3='python3'
-alias py3='p3'
-alias jp='jupyter notebook'
-
-## other programming languages
-alias r='Rscript'
 
 ## cd
 alias cd..='cd ..'
@@ -65,10 +53,25 @@ alias pull='git pull'
 alias gpush='git push'
 alias push='git push'
 
-## gpu
+## python
+alias p='python'
+alias p2='p'
+alias py='p'
+alias py2='p'
+alias p3='python3'
+alias py3='p3'
+alias jp='jupyter notebook'
+
+## other programming languages
+alias r='Rscript'
+
+## nvidia
 alias ns='nvidia-smi'
 alias nsl='nvidia-smi -lms'
 alias wn='watch -n 2 nvidia-smi'
+
+## tensorflow
+alias tb='tensorboard --logdir'
 
 ## custom scripts
 alias hide-icons='gsettings set org.gnome.desktop.background show-desktop-icons false'
