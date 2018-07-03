@@ -43,6 +43,7 @@ alias ln='ln -i' # ^^
 
 ## git
 alias ga='git add'
+alias gb='git branch'
 alias gc='git commit -m'
 alias gd='git diff'
 alias gdiff='git diff'
