@@ -54,6 +54,15 @@ alias pull='git pull'
 alias gpush='git push'
 alias push='git push'
 
+## docker
+alias db='docker build'
+alias dc='docker cp'
+alias dcp='docker cp'
+alias dr='docker run'
+
+## nvidia-docker
+alias ndr='nvidia-docker run'
+
 ## python
 alias p='python'
 alias p2='p'
