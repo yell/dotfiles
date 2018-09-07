@@ -60,6 +60,8 @@ alias db='docker build'
 alias dc='docker cp'
 alias dcp='docker cp'
 alias dr='docker run'
+alias dt='docker top'
+alias dp='docker ps'
 
 ## nvidia-docker
 alias nd='nvidia-docker'
