@@ -15,6 +15,7 @@ alias su='sudo -i'
 alias sz='du'
 alias reboot='s reboot'
 alias root='sudo -i'
+alias d="PS1='$ '"
 
 ## cd
 alias cd..='cd ..'
