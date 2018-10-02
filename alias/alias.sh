@@ -5,8 +5,7 @@ alias df='df -H'
 alias du='s du -sbh'  # size
 alias g='grep'
 alias h='history'
-alias ins='a install'
-alias i='ins'
+alias i='a install'
 alias j='jobs -l'
 alias k='kill'
 alias ll='ls -lah'
@@ -15,7 +14,7 @@ alias su='sudo -i'
 alias sz='du'
 alias reboot='s reboot'
 alias root='sudo -i'
-alias d="PS1='$ '"
+alias P="PS1='$ '"
 
 ## cd
 alias cd..='cd ..'
