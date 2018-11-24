@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Trello
-Exec=/home/monsta/Trello-linux-0.1.9
+Exec=/home/monsta/Trello-linux-0.1.9/Trello
 Terminal=false
 Type=Application
 Icon=/home/monsta/Trello-linux-0.1.9/resources/app/static/Icon.png
