@@ -5,3 +5,4 @@ Exec=/snap/bin/todoist-thibaut.todoist
 Icon=/home/monsta/Desktop/monsta/multimedia/imgs/icons/todo/unnamed.png
 StartupWMClass=Todoist
 Terminal=false
+Name[en_US]=todoist
