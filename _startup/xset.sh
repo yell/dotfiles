@@ -1,1 +1,1 @@
-xset m 3/2
+xset m 1
