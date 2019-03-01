@@ -1,9 +1,15 @@
-TARGETS = $(shell find dotfiles/ -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
+ROOT = dotfiles/
+MAKEFILES = $(shell find $(ROOT) -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
+DOTFILES = $(shell find $(ROOT) -name '.*')
 
-all: $(TARGETS)
+all: $(MAKEFILES) $(DOTFILES)
 
-$(TARGETS):
-	@echo $@
-	# cd $@ && make
+$(DOTFILES):
+	cp $@ ~
 
-.PHONY: all $(TARGETS)
+$(MAKEFILES):
+	@echo Executing $@ ...
+	cd $@ && make
+	@echo
+
+.PHONY: all $(MAKEFILES) $(DOTFILES)
