@@ -1,8 +1,9 @@
-TARGETS = $(shell find ./dotfiles -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
+TARGETS = $(shell find dotfiles/ -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
 
 all: $(TARGETS)
 
 $(TARGETS):
-	cd $@ && make
+	@echo $@
+	# cd $@ && make
 
 .PHONY: all $(TARGETS)
