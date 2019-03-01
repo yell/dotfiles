@@ -1,4 +1,4 @@
-TARGETS = $(shell find . -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
+TARGETS = $(shell find ./dotfiles -mindepth 2 -maxdepth 2 -name '?akefile' -printf "%h\n" | sort -u)
 
 all: $(TARGETS)
 
