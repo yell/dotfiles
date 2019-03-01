@@ -1,0 +1,7 @@
+[user]
+	name = monsta
+	email = yell.bondarenko@gmail.com
+[push]
+	default = simple
+[core]
+	autocrlf = input
