@@ -1,4 +1,8 @@
-all: 
-	cat bashrc.sh >> ~/.bashrc
+TARGETS = *.sh
 
-.PHONY: all
+all: $(TARGETS)
+
+$(TARGETS):
+	cat $@ >> ~/.bashrc
+
+.PHONY: all $(TARGETS)
