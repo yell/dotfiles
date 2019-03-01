@@ -1,8 +1,8 @@
-TARGETS = *.sh
+all:
+	cat codecs.sh >> ~/.bashrc
+	cat cuda.sh >> ~/.bashrc
 
-all: $(TARGETS)
+	# start from Desktop
+	echo 'cd Desktop/ 2>/dev/null' >> ~/.bashrc
 
-$(TARGETS):
-	cat $@ >> ~/.bashrc
-
-.PHONY: all $(TARGETS)
+.PHONY: all
