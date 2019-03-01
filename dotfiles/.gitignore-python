@@ -1,0 +1,24 @@
+# byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# tmp files
+*.swp
+*~
+
+# other extensions
+*.jpg
+*.json
+*.npy
+*.png
+
+# pycharm
+.idea
+
+# jupyter notebook
+.ipynb_checkpoints
+
+# project settings
+data
+experiments
