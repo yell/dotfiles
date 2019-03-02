@@ -1,0 +1,16 @@
+[
+    {"name": "bug", 
+     "color": "ee0701"},
+    {"name": "discuss", 
+     "color": "1d76db"},
+    {"name": "cleanup", 
+     "color": "90eae9"},
+    {"name": "documentation", 
+     "color": "bbbbff"},
+    {"name": "enhancement", 
+     "color": "daf927"},
+    {"name": "experiments", 
+     "color": "fbca04"},
+    {"name": "question", 
+     "color": "dd277d"}
+]
