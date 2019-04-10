@@ -1,5 +1,8 @@
+## backup
+* `make backup`
+
 ## install
-* run `make`
+* run `make restore`
 * install Package Control: https://packagecontrol.io/installation
 
 ## disable "download new version" popup
