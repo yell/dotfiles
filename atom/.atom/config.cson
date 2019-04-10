@@ -1,0 +1,63 @@
+"*":
+  "atom-beautify":
+    latex: {}
+  core:
+    disabledPackages: [
+      "markdown-preview"
+      "markdown-preview-plus-opener"
+      "markdown-preview-plus"
+      "open-path"
+      "link"
+      "latex-plus"
+      "latextools"
+      "spell-check"
+      "linter-spell"
+      "linter-spell-latex"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "atom-monokai-dark"
+    ]
+  editor: {}
+  "exception-reporting":
+    userId: "6b9ae939-16c2-4530-b06e-a66c19b34203"
+  latex:
+    opener: "pdf-view"
+  "linter-spell":
+    spellPath: "/usr/bin/aspell"
+  "linter-ui-default":
+    panelHeight: 340.4615478515625
+  "markdown-preview-enhanced":
+    openPreviewPaneAutomatically: false
+  "pdf-view":
+    paneToUseInSynctex: "right"
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.rst"
+      "text.restructuredtext"
+      "text.tex.latex"
+    ]
+  welcome:
+    showOnStartup: false
+".bibtex.text":
+  editor:
+    softWrap: true
+"spell-check":
+  excludedScopes: [
+    "support.function.tex"
+    "meta.preamble.latex"
+    "support.type.function.latex"
+    "comment.line.percentage.tex"
+    "storage.type.function.latex"
+    "support.function.latex"
+    "string.other.math.tex"
+    "string.other.math.block.environment.latex"
+    "variable.parameter.function.latex"
+    "constant.other.reference.latex"
+  ]
