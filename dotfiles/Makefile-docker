@@ -1,3 +1,5 @@
+# adapted from https://github.com/blei-lab/edward/blob/master/docker/Makefile
+
 # names and paths
 PREFIX = 
 SUFFIX = container
