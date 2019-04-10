@@ -1,2 +1,4 @@
 # bin
-`make`
+* `make install`
+* `make xset`
+* `make redshift`
