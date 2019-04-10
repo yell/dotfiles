@@ -1,0 +1,2 @@
+# alias
+`make (backup|restore)`
