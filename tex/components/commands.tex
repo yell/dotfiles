@@ -1,0 +1,209 @@
+% -----------------------------
+% ----- General shortcuts -----
+% \renewcommand{\sf}[1]{\textsf{#1}}
+% \renewcommand{\tt}[1]{\texttt{#1}}
+% \renewcommand{\bf}[1]{\textbf{#1}}
+% \renewcommand{\sl}[1]{\textsl{#1}}
+% \renewcommand{\sc}[1]{\textsc{#1}}
+% \newcommand{\e}[1]{\emph{#1}}
+
+\renewcommand{\u}[1]{\underline{#1}}
+
+\newcommand{\gooditem}{\item[\checkmark]}
+\newcommand{\baditem}{\item[\ding{53}]}
+\newcommand{\good}{\textbf{\color{green}[\checkmark]}}
+\newcommand{\bad}{\textbf{\color{red}[\ding{53}]}}
+
+
+% ----------------------------
+% ----- General commands -----
+\newcommand{\commentinline}[1]{\color{darkgray}\left[\text{#1}\right]\color{black}}
+\newcommand{\commentii}[2]{\color{darkgray}\left[\begin{array}{c}\text{#1}\\ \text{#2}\end{array}\right]\color{black}}
+
+
+% --------------------------------------
+% ----- Document layout/formatting -----
+
+% page clearing
+\newcommand{\clearemptydoublepage}{%
+  \ifthenelse{\boolean{@twoside}}{\newpage{\pagestyle{empty}\cleardoublepage}}%
+  {\clearpage}}
+
+% comment that appears on the border
+\newcommand{\mcomment}[1]{\marginpar{\raggedright \noindent {\textsl{#1}}}}
+
+
+% insert figure (fname, caption for ToC, caption, label, width as fraction of \textwidth)
+\newcommand{\insertfig}[5]{
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=#5\textwidth]{#1}  % width, height, scale, angle ...
+		\end{center}
+		\vspace{-0.4cm}
+		\caption[#2]{#3}
+		\label{fig:#4}
+	\end{figure}
+}
+
+% --- color box ---
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+
+\newcommand\mybox{%
+    \@ifnextchar[%]
+       {\@mybox}%
+       {\@mybox[0pt]}}
+
+\def\@mybox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybox[#1]}%
+       {\@@mybox[#1][0pt]}}
+
+\def\@@mybox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{boxc}{\hspace{0em}\usebox{\mytempbox}\hspace{0em}}}
+
+\makeatother
+
+
+% ----------------------
+% ----- References -----
+
+% suffixes are consistent with:
+% https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+\newcommand{\refch}[1]{chapter \ref{ch:#1}}
+\newcommand{\refsec}[1]{section \ref{sec:#1}}
+\newcommand{\refsubsec}[1]{subsection \ref{subsec:#1}}
+\newcommand{\reffig}[1]{figure \ref{fig:#1}}
+\newcommand{\reftab}[1]{table \ref{tab:#1}}
+\renewcommand{\refeq}[1]{equation \eqref{eq:#1}}
+\newcommand{\reflst}[1]{listing \ref{lst:#1}}  % code listing
+\newcommand{\refitm}[1]{\ref{itm:#1}}  % enumerated list item
+\newcommand{\refalg}[1]{algorithm \ref{alg:#1}}
+\newcommand{\refapp}[1]{appendix \ref{app:#1}}
+
+\newcommand{\refCh}[1]{Chapter \ref{ch:#1}}
+\newcommand{\refSec}[1]{Section \ref{sec:#1}}
+\newcommand{\refSubsec}[1]{Subsection \ref{subsec:#1}}
+\newcommand{\refFig}[1]{Figure \ref{fig:#1}}
+\newcommand{\refTab}[1]{Table \ref{tab:#1}}
+\newcommand{\refEq}[1]{Equation \eqref{eq:#1}}
+\newcommand{\refLst}[1]{Listing \ref{lst:#1}}  % code listing
+
+\newcommand{\refAlg}[1]{Algorithm \ref{alg:#1}}
+\newcommand{\refApp}[1]{Appendix \ref{app:#1}}
+
+
+% --------------------------------------------
+% ----- Theorems environments & counters -----
+% \newtheorem{theorem}{Theorem}[chapter]
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{equat}[theorem]{Equation}
+% \newtheorem{example}[theorem]{Example}
+% \newtheorem{algorithm}[theorem]{Algorithm}
+
+
+% ----------------------
+% ----- Math stuff -----
+
+% --- general shortcuts ---
+\renewcommand{\l}{\left}
+\renewcommand{\r}{\right}
+\renewcommand{\o}[1]{\overline{#1}}
+\newcommand{\ub}[2]{\underbrace{#1}_{#2}}
+\newcommand{\ob}[2]{\overbrace{#1}_{#2}}
+
+% --- fonts & boldness ---
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+
+% --- shortcuts to common quantities ---
+\newcommand{\half}{\frac{1}{2}}
+
+% --- shortcuts for delimiters with correct auto-size ---
+% (names are consistent with `matrix` environment)
+\newcommand{\p}[1]{ \left( #1 \right) }
+\renewcommand{\b}[1]{ \left[ #1 \right] }
+\newcommand{\B}[1]{ \left\{ #1 \right\} }
+\renewcommand{\v}[1]{ \left| #1 \right| }
+\newcommand{\V}[1]{ \left\| #1 \right\| }
+
+% --- general math ---
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\e}{e}  % exp
+
+% better defaults
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\eps}{\epsilon}
+\renewcommand{\kappa}{\varkappa}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+% spaces
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+% \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+
+% --- linear algebra ---
+\let\tr\relax\DeclareMathOperator{\tr}{tr}
+\let\Tr\relax\DeclareMathOperator{\Tr}{Tr}
+
+% \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\vecii}[2]{\begin{array}[h]{c} #1 \\ #2	\end{array}}
+\newcommand{\veciii}[3]{\begin{array}[h]{c} #1 \\ #2 \\ #3	\end{array}}
+\newcommand{\veciv}[4]{\begin{array}[h]{c} #1 \\ #2 \\ #3 \\ #4	\end{array}}
+
+\newcommand{\matii}[4]{\begin{array}[h]{ccc} #1 & #2 \\ #3 & #4 \end{array}}
+\newcommand{\matiii}[9]{\begin{array}[h]{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9	\end{array}}
+
+% --- calculus ---
+\newcommand{\evalat}[1]{\biggr\rvert _{#1}}
+% \newcommand{\pd}[2]{ \frac{\partial #1}{\partial #2} }  % partial derivative
+\DeclareDocumentCommand{\pd}{ O{} O{} m }{\frac{\partial^{#2}#1}{\partial#3^{#2}}}  % partial derivative
+
+\renewcommand{\d}{\mathrm{d}}  % upright "d" for differential
+\newcommand{\ud}{\,\mathrm{d}}  % correct spacing for differential in integral
+
+% --- probability theory ---
+\let\var\relax\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\med}{med}
+
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}[1]{\mathbb{P}\left\lbrace #1 \right\rbrace}
+\renewcommand{\Pr}[1]{\operatorname{Pr}\left\lbrace #1 \right\rbrace}
+
+% --- information theory ---
+\newcommand{\KL}[2]{\operatorname{KL}(#1 \parallel #2)}
+\newcommand{\DKL}[2]{D_{\operatorname{KL}}(#1 \parallel #2)}
+
+
+% ----------------
+% ----- Misc -----
+
+% --- some abreviations ---
+\newcommand{\Reg}{$^{\textregistered}$}
+\newcommand{\reg}{$^{\textregistered}$ }
+\newcommand{\Tm}{\texttrademark}
+\newcommand{\tm}{\texttrademark~}
+\newcommand{\bsl}{$\backslash$}

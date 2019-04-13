@@ -1,0 +1,198 @@
+% --- microtype ---
+\usepackage[activate={true,nocompatibility},
+            factor=1100,
+            stretch=10,
+            shrink=10]{microtype}  % improve general appearance
+% activate - protrusion and expansion
+% factor - add 10% to the protrusion amount (default is 1000)
+% stretch / shrink - reduce stretchability/shrinkability (default is 20/20)
+
+% \usepackage{palatino}  % ugly font [deprecated]
+% \usepackage[sc]{mathpazo}  % same font but not deprecated package
+\usepackage{pifont}  % special PostScript fonts (e.g. for xmark == ding{53})
+% \usepackage[scaled=0.8]{luximono}  % fixed-width font that supports boldface (useful when typesetting source code)
+
+% \usepackage{multicol}  % typeset text in multiple columns
+\usepackage[titletoc]{appendix}  % prepend "Appendix" to chapter names
+\usepackage{titlesec}  % help with section naming
+% \usepackage{geometry}  % page dimensions, margins ...
+% \usepackage{fancyhdr}  % customizing the headers and footers
+% \usepackage{quotchap}  % fancy chapter heading pages
+% \usepackage[parfill]{parskip}  % use no indentation and space between paragraphs
+\usepackage{nicefrac}  % nicer fractions
+
+
+% ----------------------------
+% ----- Utility packages -----
+\usepackage{empheq}  % for colorbox
+\usepackage{mdframed}  % for box around figures
+
+\usepackage{lipsum}
+\usepackage{blindtext}
+
+\usepackage{enumitem}  % much easier to make modifications to lists
+% \usepackage{paralist}  % Improves enumerate and itemize. Also provides some compact environments
+
+\usepackage{ifthen}  % used in \clearemptydoublepage
+\usepackage{rotating}  % rotation tools, including rotated full-page floats
+\usepackage{xparse}  % more flexible macros with more than one optional argument
+
+% --- margin notes ---
+\usepackage{marginnote}
+\usepackage{mparhack}
+\usepackage{marginfix}
+
+
+% ------------------------------
+% ----- Document structure -----
+\usepackage{booktabs}  % for elegant tables
+\usepackage[acronym,symbols,
+            nomain,nogroupskip,nonumberlist,nopostdot,  % xindy,
+            toc]{glossaries}
+\usepackage{glossary-longbooktabs}
+  \newglossary[slg]{symbolslist}{syi}{syg}{Symbolslist}
+  \makeglossaries
+% \usepackage{makeidx}  % standard LaTeX package for creating indexes
+% xindy - more flexible than makeindex (sudo apt install xindy)
+\usepackage{subfiles}
+
+
+% ------------------------
+% ----- Bibliography -----
+\usepackage{csquotes}
+\usepackage[english]{babel}  % set default language to English
+% \usepackage[backend=biber,
+%             bibstyle=authoryear,
+%             citestyle=authoryear,%apa,
+%             % natbib=true,
+%             hyperref=true,
+%             isbn=true,
+%             doi=true,
+%             url=true,
+%             eprint=true]{biblatex}
+% \DeclareLanguageMapping{english}{english-apa}
+
+% --- apacite ---
+\usepackage[natbibapa]{apacite}
+  \bibliographystyle{apacite}
+\usepackage[hyphens,spaces]{url}
+
+% --- plain natbib ---
+% \usepackage[round, sort]{natbib}
+% \bibliographystyle{plainnat}
+
+\usepackage[nottoc,numbib]{tocbibind}  % add bibliography & listings to ToC
+
+% ------------------
+% ----- Tables -----
+\usepackage{tabularx}
+\usepackage{tabu}  % tables
+% \usepackage{colortbl}  % add color to LaTeX tables
+% \usepackage{multirow}  % tabular cells spanning multiple rows
+% \usepackage{dcolumn}  % columns of different types and alignment
+
+
+% ----------------
+% ----- Math -----
+
+% --- AMS facilities ---
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{mathtools}
+\usepackage[retainorgcmds]{IEEEtrantools}  % sophisticated equation arrays
+% \usepackage{yhmath}  % extended maths fonts for LaTeX
+% \usepackage{commath}  % math delimiters of auto computed size
+% \usepackage{comment}
+% \usepackage{kbordermatrix}  % add column and row labels to matrices
+\usepackage{physics}  % \bra, \ket, \expval, \mel ...
+                      % & \abs, \norm, \var, \tr, \Tr ...
+
+
+% -------------------------------
+% ----- Graphics and floats -----
+\usepackage{float}  % improved interface for floating objects
+\usepackage{caption}
+\usepackage{subcaption}  % to use subfigures
+\usepackage{graphicx}  % enhanced support for graphics
+  \graphicspath{{figures/}{../figures/}}  % in gereral {{subdir1/}...{subdirn/}}
+
+% \usepackage{tikz}
+% \usepackage{pgfplots}  % uses PGF to draw professionally looking charts and plots
+
+% -----------------
+% ----- Color -----
+\usepackage[dvipsnames]{xcolor}  % color (+ in math mode)
+% pre-defined colors: https://en.wikibooks.org/wiki/LaTeX/Colors#Predefined_colors
+
+% --- my colors ---
+\definecolor{tumblue}{HTML}{0065BD}
+\definecolor{darkblue}{HTML}{001473}
+\definecolor{darkgray}{RGB}{100, 100, 100}
+\definecolor{ddarkgray}{RGB}{66, 66, 66}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{orange}{rgb}{1.0,0.3,0.01}
+\definecolor{violet}{rgb}{0.4,0.0,0.6}
+\definecolor{yellow}{rgb}{1.0,0.7,0.0}
+\definecolor{boxc}{rgb}{1.0, 1.0, .9}
+\definecolor{mygreen}{rgb}{0, 0.75, 0.18}
+
+% --- hyperref colors ---
+\def\linkcolor{tumblue}
+\def\urlcolor{darkblue}
+\def\citecolor{darkblue}
+
+
+% -----------------------
+% ----- Source code -----
+% \usepackage{listings} % (optional - alternative)
+% \usepackage[newfloat]{minted} % (recommended)
+% Set global Minted options
+% \setminted{linenos, autogobble, frame=lines, framesep=2mm}
+%%% Inline C++ (optional)
+% \newcommand{\incpp}[1]{\mintinline{c++}{#1}}
+% \newenvironment{code}{\captionsetup{type=listing}}{}
+% \SetupFloatingEnvironment{listing}{name=Source Code}
+
+
+% -----------------------------------
+% ----- Algorithms (pseudocode) -----
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+  \algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}  % normal arrow comments
+
+
+% --------------------
+% ----- Hyperref -----
+\usepackage[linktocpage,
+            colorlinks=true,
+            bookmarksnumbered=true]{hyperref}
+
+% set links colors
+\hypersetup{
+  linkcolor=\linkcolor,%
+  urlcolor=\urlcolor,%
+  citecolor=\citecolor
+}
+
+% disable the coloring of the links when printing
+\usepackage[ocgcolorlinks]{ocgx2}[2017/03/30]
+
+% PDF metadata
+% \hypersetup{
+%   pdftitle={\metatitle},%
+%   pdfauthor={\metaauthor},%
+%   pdfkeywords={\metakeywords},%
+%   pdfsubject={\metasubject}
+% }
+
+% ----------------------------------------------------------------------------------
+% ----- Utilities that must go after other packages (`hyperref`, `xcolor` ...) -----
+\usepackage{bookmark}  % better bookmark handling (loads hyperref)
+\usepackage{hyperxmp}  % create XMP Metadata (uses the values from hyperref)
+\usepackage{xspace}  % define commands that do not eat spaces
+% \usepackage{thumbpdf}  % make thumbnails
+\usepackage{todonotes}
+% \usepackage{fancyvrb}  % highly customisable verbatim
