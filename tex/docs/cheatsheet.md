@@ -31,6 +31,20 @@
 ```
 
 
+## references common prefixes
+https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+* `ch:` - chapter
+* `sec:` - section
+* `subsec:` - subsection
+* `fig:` - figure
+* `tab:` - table
+* `eq:` - equation
+* `lst:` - code listing
+* `itm:` - algorithm
+* `alg:` - enumerated list item
+* `app:` - appendix
+
+
 ## math fonts
 * `\mathrm` - roman
 * `\mathbf` - boldface
@@ -47,15 +61,12 @@
 * `\mathbbm` - another blackboard bold (`bbm` package)
 
 
-## references common prefixes
-https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
-* `ch:` - chapter
-* `sec:` - section
-* `subsec:` - subsection
-* `fig:` - figure
-* `tab:` - table
-* `eq:` - equation
-* `lst:` - code listing
-* `itm:` - algorithm
-* `alg:` - enumerated list item
-* `app:` - appendix
+## math mode spacing
+* `\quad` = `1em` := width(`M`)
+* `\,` = 3/18`em`
+* `\:` = 4/18`em`
+* `\;` = 5/18`em`
+* `\ ` ~ interword spacing
+* `\qquad` = 2`em`
+* `\enskip` = 0.5`em`
+* `\!` = `-3/18 em`
