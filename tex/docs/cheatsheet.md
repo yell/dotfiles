@@ -3,15 +3,15 @@
 * `\textrm` - roman (default)
 * `\textsf` - sans serif
 * `\texttt` - typewriter
-
+*
 * `\textmd` - medium (default)
 * `\textbf` - bold face
- 
+*
 * `\textup` - upright (default)
 * `\textit` - italic
 * `\textsl` - slanted
 * `\textsc` - small caps
- 
+*
 * `\textnormal` - document font (default)
 * `\emph` - emphasized
 
