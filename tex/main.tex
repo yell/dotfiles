@@ -159,9 +159,11 @@
     \end{equation}
 
     \begin{equation}
-      = \P{\frac{X}{\E X} \leq \epsilon}
-      = \Pr{\mathrm{Poisson}(\lambda=3) > 5}
+      = \frac{\displaystyle \P{\frac{X}{\E X} \leq \epsilon}}
+             {\displaystyle \Pr{\mathrm{Poisson}(\lambda=3) > 5}}
       = \pd{x} \cdot \pd[f]{x} \cdot \pd[f][2]{x}
+      = \evalat{\pd{x}\frac{x^2+1}{x^3+1}}{x=0}
+      = \evalat{\frac{\d}{\ud x}\frac{x^2+1}{x^3+1}}{x=0}
     \end{equation}
 
     \begin{equation}

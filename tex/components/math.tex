@@ -22,9 +22,9 @@
 % # Math delimiters with correct auto-size
 % * names are consistent with `matrix` environment prefixes
 \newcommand{\p}[1]{ \left( #1 \right) }
-\renewcommand{\b}[1]{ \left[ #1 \right] }
-\newcommand{\B}[1]{ \left\{ #1 \right\} }
-\renewcommand{\v}[1]{ \left| #1 \right| }
+\renewcommand{\b}[1]{ \left\lbrack #1 \right\rbrack }
+\newcommand{\B}[1]{ \left\lbrace #1 \right\rbrace }
+\renewcommand{\v}[1]{ \left\lvert #1 \right\rvert }
 \newcommand{\V}[1]{ \left\| #1 \right\| }
 
 
@@ -65,10 +65,11 @@
 
 
 % # Calculus
-\newcommand{\evalat}[1]{\biggr\rvert _{#1}}
+\newcommand{\evalat}[2]{\left. #1 \right\rvert_{#2}}
 % \newcommand{\pd}[2]{ \frac{\partial #1}{\partial #2} }  % partial derivative
 \DeclareDocumentCommand{\pd}{ O{} O{} m }{\frac{\partial^{#2}#1}{\partial#3^{#2}}}  % partial derivative
 
+% \newcommand{\pd}{\partial}  % partial differential
 \renewcommand{\d}{\mathrm{d}}  % upright "d" for differential
 \newcommand{\ud}{\,\mathrm{d}}  % correct spacing for differential in integral
 
