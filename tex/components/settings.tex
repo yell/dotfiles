@@ -1,71 +1,68 @@
+% # Encoding
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 
-% --- microtype ---
-\usepackage[activate={true,nocompatibility},
-            final,
-            factor=1100,
-            stretch=10,
-            shrink=10]{microtype}  % microtypography, improves general appearance
-% activate - protrusion and expansion
-% draft / final
-% factor - add 10% to the protrusion amount (default is 1000)
-% stretch / shrink - reduce stretchability/shrinkability (default is 20/20)
 
-% \usepackage{palatino}  % ugly font [deprecated]
-% \usepackage[sc]{mathpazo}  % same font but not deprecated package
-\usepackage{pifont}  % special PostScript fonts (e.g. for xmark == ding{53})
-% \usepackage[scaled=0.8]{luximono}  % fixed-width font that supports boldface (useful when typesetting source code)
-
-% \usepackage{multicol}  % typeset text in multiple columns
-\usepackage[titletoc]{appendix}  % prepend "Appendix" to chapter names
-\usepackage{titlesec}  % help with section naming
-% \usepackage{geometry}  % page dimensions, margins ...
-% \usepackage{fancyhdr}  % customizing the headers and footers
-% \usepackage{quotchap}  % fancy chapter heading pages
-% \usepackage[parfill]{parskip}  % use no indentation and space between paragraphs
-\usepackage{nicefrac}  % nicer fractions, (compact symbols for 1/2, etc.)
-
-
-% ----------------------------
-% ----- Utility packages -----
-\usepackage{empheq}  % for colorbox
-\usepackage{mdframed}  % for box around figures
-
-\usepackage{lipsum}
-\usepackage{blindtext}
-
-\usepackage{enumitem}  % much easier to modify lists, e.g. `noitemsep`
-% \usepackage{paralist}  % Improves enumerate and itemize. Also provides some compact environments
-
-\usepackage{ifthen}  % used in \clearemptydoublepage
-\usepackage{rotating}  % rotation tools, including rotated full-page floats
+% # Control structures and utilities
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{thumbpdf}  % make PDF thumbnail
 \usepackage{xparse}  % more flexible macros with more than one optional argument
 
-% --- margin notes ---
-\usepackage{marginnote}
-\usepackage{mparhack}
-\usepackage{marginfix}
+
+% # Fonts
+% \usepackage[scaled=0.8]{luximono}  % fixed-width font that supports boldface (useful for typesetting source code)
+% \usepackage[sc]{mathpazo}  % like `palatino` but not deprecated
+% \usepackage{palatino}  % ugly font [deprecated]
+\usepackage{pifont}  % special PostScript fonts (e.g. for xmark == ding{53})
 
 
-% ------------------------------
-% ----- Document structure -----
-\usepackage{booktabs}  % professional-quality, elegant tables
-\usepackage[acronym,symbols,
-            nomain,nogroupskip,nonumberlist,nopostdot,  % xindy,
-            toc]{glossaries}
+% # Document formatting
+\usepackage[titletoc]{appendix}  % prepend "Appendix" to chapter names
+\usepackage{blindtext}  % similar to `lipsum`
+\usepackage{empheq}  % for colorbox
+\usepackage{enumitem}  % customizable lists, e.g. `noitemsep`
+% \usepackage{fancyhdr}  % customizing the headers and footers
+% \usepackage{fancyvrb}  % highly customisable verbatim
+\usepackage[symbol]{footmisc}  % symbols for footnotemark instead of numbers
+% \usepackage{geometry}  % page dimensions, margins ...
+\usepackage{marginnote}  % margin notes
+  \usepackage{mparhack}
+  \usepackage{marginfix}
+\usepackage[activate={true,nocompatibility},final,factor=1100,stretch=10,shrink=10]{microtype}  % microtypography, improves general appearance
+  % * activate - protrusion and expansion
+  % * draft / final
+  % * factor - add 10% to the protrusion amount (default is 1000)
+  % * stretch / shrink - reduce stretchability/shrinkability (default is 20/20)
+\usepackage{lipsum}  % Lorem ipsum
+\usepackage{mdframed}  % for box around floating bodies (figures, algorithms...)
+% \usepackage{multicol}  % typeset text in multiple columns
+\usepackage{nicefrac}  % nicer fractions, (compact symbols for 1/2, etc.)
+% \usepackage{paralist}  % Improves enumerate and itemize. Also provides some compact environments
+% \usepackage[parfill]{parskip}  % use no indentation and space between paragraphs
+% \usepackage{quotchap}  % fancy chapter heading pages
+\usepackage{rotating}  % rotation tools, including rotated full-page floats
+\usepackage{titlesec}  % help with section naming
+% \usepackage{tocloft}  % ToC formatting
+\usepackage[hyphens,spaces]{url}  % simple URL typesetting
+\usepackage{verbatim}
+\usepackage{xspace}  % clever spacing for new commands (do not eat spaces)
+
+
+% # Document structure
+\usepackage[acronym,symbols,nomain,nogroupskip,nonumberlist,nopostdot,toc]{glossaries}
+  % * xindy - more flexible than makeindex (sudo apt install xindy)
 \usepackage{glossary-longbooktabs}
   \newglossary[slg]{symbolslist}{syi}{syg}{Symbolslist}
   \makeglossaries
 % \usepackage{makeidx}  % standard LaTeX package for creating indexes
-% xindy - more flexible than makeindex (sudo apt install xindy)
 \usepackage{subfiles}
 
 
-% ------------------------
-% ----- Bibliography -----
-\usepackage{csquotes}
-\usepackage[english]{babel}  % set default language to English
+% # Bibliography
+% ## `biblatex`
+  \usepackage{csquotes}
+  \usepackage[english]{babel}  % set default language to English
 % \usepackage[backend=biber,
 %             bibstyle=authoryear,
 %             citestyle=authoryear,%apa,
@@ -75,66 +72,73 @@
 %             doi=true,
 %             url=true,
 %             eprint=true]{biblatex}
-% \DeclareLanguageMapping{english}{english-apa}
+  % \DeclareLanguageMapping{english}{english-apa}
 
-% --- apacite ---
+% ## `apacite`
 \usepackage[natbibapa]{apacite}
   \bibliographystyle{apacite}
-\usepackage[hyphens,spaces]{url}  % simple URL typesetting
 
-% --- plain natbib ---
+% ## plain `natbib`
 % \usepackage[round,sort]{natbib}
 % \bibliographystyle{plainnat}
 
+% ## utilities
 \usepackage[nottoc,numbib]{tocbibind}  % add bibliography & listings to ToC
 
-% ------------------
-% ----- Tables -----
-\usepackage{tabularx}
-\usepackage{tabu}  % tables
+
+% # Tables
+\usepackage{booktabs}  % professional-quality, elegant tables
 % \usepackage{colortbl}  % add color to LaTeX tables
-% \usepackage{multirow}  % tabular cells spanning multiple rows
 % \usepackage{dcolumn}  % columns of different types and alignment
+% \usepackage{longtable}  % enable pagebreaks in a table
+% \usepackage{lscape}  % allow landscape mode
+% \usepackage{multirow}  % tabular cells spanning multiple rows
+\usepackage{tabularx}
+\usepackage{tabu}  % new interface for tables
 
 
-% ----------------
-% ----- Math -----
-
-% --- AMS facilities ---
+% # Math
+% ## AMS facilities
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}  % blackboard math symbols
 \usepackage{amssymb}
+
+% ## other math fonts
+\usepackage{bbm}
+\usepackage{latexsym}
 \usepackage{mathrsfs}  % \mathscr
-\usepackage{mathtools}  % \mathclap ...
-\usepackage[retainorgcmds]{IEEEtrantools}  % sophisticated equation arrays
 % \usepackage{yhmath}  % extended maths fonts for LaTeX
+
+% ## additional tools
+\usepackage[makeroom]{cancel}
 % \usepackage{commath}  % math delimiters of auto computed size
-% \usepackage{comment}
+\usepackage[retainorgcmds]{IEEEtrantools}  % sophisticated equation arrays
 % \usepackage{kbordermatrix}  % add column and row labels to matrices
+\usepackage{mathtools}  % \mathclap ...
 \usepackage{physics}  % \bra, \ket, \expval, \mel ...
                       % & \abs, \norm, \var, \tr, \Tr ...
-\usepackage{bbm}
-\usepackage[makeroom]{cancel}
 
 
-% -------------------------------
-% ----- Graphics and floats -----
-\usepackage{float}  % improved interface for floating objects
+% # Graphics
 \usepackage{caption}
-\usepackage{subcaption}  % to use subfigures
+\usepackage{float}  % improved interface for floating objects
 \usepackage{graphicx}  % enhanced support for graphics
   \graphicspath{{figures/}{../figures/}}  % in gereral {{subdir1/}...{subdirn/}}
-
-% \usepackage{tikz}
+\usepackage{movie15}  % inline figures
 % \usepackage{pgfplots}  % uses PGF to draw professionally looking charts and plots
+\usepackage{subcaption}  % subfigures
+% \usepackage{textpos}  % absolute positioning on the page
+% \usepackage{tikz}  % `tikzpictures`
+\usepackage{titlepic}  % add a picture to the title page (requires `titlepage` for articles)
+% \usepackage{wrapfig}  % allow text to wrap around figures
 
-% -----------------
-% ----- Color -----
+
+% # Colors
 \usepackage[dvipsnames]{xcolor}  % color (+ in math mode)
-% pre-defined colors: https://en.wikibooks.org/wiki/LaTeX/Colors#Predefined_colors
+  % pre-defined colors: https://en.wikibooks.org/wiki/LaTeX/Colors#Predefined_colors
 
-% --- my colors ---
+% ## my colors
 \definecolor{tumblue}{HTML}{0065BD}
 \definecolor{darkblue}{HTML}{001473}
 \definecolor{darkgray}{RGB}{100, 100, 100}
@@ -146,15 +150,14 @@
 \definecolor{boxc}{rgb}{1.0, 1.0, .9}
 \definecolor{mygreen}{rgb}{0, 0.75, 0.18}
 
-% --- hyperref colors ---
+% ## define colors for `hyperref`
 \def\linkcolor{tumblue}
 \def\urlcolor{darkblue}
 \def\citecolor{darkblue}
 
 
-% -----------------------
-% ----- Source code -----
-% \usepackage{listings} % (optional - alternative)
+% # Listings
+% \usepackage{listings}  % automatically colour code
 % \usepackage[newfloat]{minted} % (recommended)
 % Set global Minted options
 % \setminted{linenos, autogobble, frame=lines, framesep=2mm}
@@ -162,9 +165,8 @@
 % \newcommand{\incpp}[1]{\mintinline{c++}{#1}}
 % \newenvironment{code}{\captionsetup{type=listing}}{}
 % \SetupFloatingEnvironment{listing}{name=Source Code}
-% --------------
-% python listing
-% --------------
+
+% ## python listing
 % \floatstyle{plain}
 % \restylefloat{figure}
 % \lstset{frame=tb,
@@ -185,43 +187,37 @@
 % }
 
 
-% -----------------------------------
-% ----- Algorithms (pseudocode) -----
+% # Algorithms (pseudocode)
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
   \algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}  % normal arrow comments
 
 
-% --------------------
-% ----- Hyperref -----
-\usepackage[linktocpage,
-            colorlinks=true,
-            bookmarksnumbered=true]{hyperref}  % hyperlinks
+% # Hyperlinks
+\usepackage[linktocpage,colorlinks=true,bookmarksnumbered=true]{hyperref}  % hyperlinks
 
-% set links colors
+% ## set links colors
 \hypersetup{
   linkcolor=\linkcolor,%
   urlcolor=\urlcolor,%
   citecolor=\citecolor
 }
 
-% disable the coloring of the links when printing
+% ## disable the coloring of the links when printing
 \usepackage[ocgcolorlinks]{ocgx2}[2017/03/30]
 
-% PDF metadata
-% \hypersetup{
-%   pdftitle={\metatitle},%
-%   pdfauthor={\metaauthor},%
-%   pdfkeywords={\metakeywords},%
-%   pdfsubject={\metasubject}
-% }
+% ## PDF metadata
+\hypersetup{
+  pdftitle={The Title},%
+  pdfauthor={The Author},%
+  pdfcreator={The Creator},%
+  pdfproducer={The Producer},%
+  pdfkeywords={{Keyword1},{Keyword2},{Keyword3}},%
+  pdfsubject={The Subject},
+}
 
-% ----------------------------------------------------------------------------------
-% ----- Utilities that must go after other packages (`hyperref`, `xcolor` ...) -----
+
+% # Dependent packages (on `hyperref`, `xcolor`, `url` ...)
 \usepackage{bookmark}  % better bookmark handling (loads hyperref)
 \usepackage{hyperxmp}  % create XMP Metadata (uses the values from hyperref)
-\usepackage{xspace}  % define commands that do not eat spaces
-% \usepackage{thumbpdf}  % make thumbnails
-\usepackage{todonotes}
-% \usepackage{verbatim}
-% \usepackage{fancyvrb}  % highly customisable verbatim
+\usepackage{todonotes}  % \todo, \listoftodos

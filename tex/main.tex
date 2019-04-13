@@ -1,8 +1,5 @@
 \documentclass[a4paper,11pt]{article}
 
-\usepackage[symbol]{footmisc}  % footnote symbols instead of numbers
-\usepackage{movie15}  % inline figures
-\usepackage{calc}
 \input{components/settings}
 \input{components/commands}
 
@@ -23,16 +20,15 @@
 \begin{document}
   \maketitle
 
-
-  \section{Essential} \label{sec:label}
   % ## common
-  % \tableofcontents
+  \tableofcontents
   % \listoftables
   % \listoffigures
   % {\let\cleardoublepage\clearpage \chapter{Chapter}\label{ch:label}}
-
-  % ## annotation
   % \listoftodos
+
+  \section{Essential} \label{sec:label}
+  % ## annotation
   \todo{\textbackslash todo}
   \marginpar{\textbackslash marginpar}
   \mcomment{\textbackslash mcomment}
@@ -77,7 +73,7 @@
 
 
   \section{Other CO\texorpdfstring{\textsubscript{2}}{2}}
-  \subsection*{Subcaption}
+  \subsection*{Subfigures}
   \begin{figure}[htb]
     \centering
     %
@@ -178,19 +174,19 @@
 
   \subsection*{Math fonts}
     \begin{gather}
-      \mathrm{ABCDEFabcdef} \tag{roman} \\
-      \mathbf{ABCDEFabcdef} \tag{boldface} \\
-      \mathsf{ABCDEFabcdef} \tag{sans serif} \\
-      \mathtt{ABCDEFabcdef} \tag{typewriter} \\
-      \mathit{ABCDEFabcdef} \tag{italic} \\
-      \mathcal{ABCDEFabcdef} \tag{calligraphic} \\
-      \mathnormal{ABCDEFabcdef} \tag{normal}
+      \mathrm{ABCDEFabcdef} \tag{mathrm} \\
+      \mathbf{ABCDEFabcdef} \tag{mathbf} \\
+      \mathsf{ABCDEFabcdef} \tag{mathsf} \\
+      \mathtt{ABCDEFabcdef} \tag{mathtt} \\
+      \mathit{ABCDEFabcdef} \tag{mathit} \\
+      \mathcal{ABCDEFabcdef} \tag{mathcal} \\
+      \mathnormal{ABCDEFabcdef} \tag{mathnormal}
       \\[0.5em]
       \boldsymbol{ABCabc \Gamma\Omega\Xi \gamma\omega\xi } \tag{boldsymbol} \\
-      \mathscr{ABCDEFabcdef} \tag{scr} \\
-      \mathfrak{ABCDEFabcdef} \tag{frak} \\
-      \mathbb{ABCDEFabcdef12345} \tag{bb} \\
-      \mathbbm{ABCDEFabcdef12345} \tag{bbm}
+      \mathscr{ABCDEFabcdef} \tag{mathscr} \\
+      \mathfrak{ABCDEFabcdef} \tag{mathfrak} \\
+      \mathbb{ABCDEFabcdef12345} \tag{mathbb} \\
+      \mathbbm{ABCDEFabcdef12345} \tag{mathbbm}
     \end{gather}
 
   \subsection*{Text fonts}
@@ -223,6 +219,7 @@
     \end{itemize}
 
   % # Bibliography
+  \newpage
   % ## bibliography using `biblatex`
   % \setlength\bibitemsep{1.5\itemsep}
   % \printbibliography
