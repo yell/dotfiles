@@ -2,6 +2,7 @@
 
 \usepackage[symbol]{footmisc}  % footnote symbols instead of numbers
 \usepackage{movie15}  % inline figures
+\usepackage{calc}
 \input{components/settings}
 \input{components/commands}
 
@@ -77,37 +78,41 @@
 
   \section{Other CO\texorpdfstring{\textsubscript{2}}{2}}
   \subsection*{Subcaption}
-  \begin{figure}[h]
+  \begin{figure}[htb]
     \centering
-    \begin{subfigure}[b]{0.5\textwidth}
-      \includegraphics[width=\textwidth]{death-star}
+    %
+    \begin{subfigure}[b]{.475\textwidth}
+      \frame{\includegraphics[width=\textwidth]{death-star}}
       \caption{Caption 1}
       \label{fig:1}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.5\textwidth}
+    \begin{subfigure}[b]{.475\textwidth}
       \includegraphics[width=\textwidth]{death-star}
       \caption{Caption 2}
       \label{fig:2}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.33\textwidth}
-      \includegraphics[width=\textwidth]{death-star}
+    %
+    \begin{subfigure}[b]{.3\textwidth}
+      \frame{\includegraphics[width=\textwidth]{death-star}}
       \caption{Caption 3}
       \label{fig:3}
     \end{subfigure}
-    %
-    \begin{subfigure}[b]{0.33\textwidth}
+    \hfill
+    \begin{subfigure}[b]{.3\textwidth}
       \includegraphics[width=\textwidth]{death-star}
       \caption{Caption 4}
       \label{fig:4}
     \end{subfigure}
-    %
-    \begin{subfigure}[b]{0.33\textwidth}
+    \hfill
+    \begin{subfigure}[b]{.3\textwidth}
       \includegraphics[width=\textwidth]{death-star}
       \caption{Caption 5}
       \label{fig:5}
     \end{subfigure}
+    %
+    \caption{The caption}
+    \label{fig:subfigures}
   \end{figure}
 
   \subsection*{Proof}
