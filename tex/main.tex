@@ -18,7 +18,21 @@
 \begin{document}
   \maketitle
 
-  TensorFlow \citep{tf}.
+  % ## table
+  \begin{tabular}[t]{cc}
+    \toprule
+    A & B \\
+    \midrule
+    a & b \\
+    c & d \\
+    \bottomrule
+  \end{tabular}
+
+  % ## figure
+  \insertfig{death-star}{Caption for ToC}{Caption}{label}{0.2}  % `fig:label`
+
+  % ## cite
+  TensorFlow \citep{tf}, \citet{tf}.
 
   % ## bibliography using `biblatex`
   % \setlength\bibitemsep{1.5\itemsep}
