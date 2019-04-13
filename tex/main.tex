@@ -1,14 +1,18 @@
 \documentclass[a4paper,11pt]{article}
 
-\usepackage[symbol]{footmisc}
+\usepackage[symbol]{footmisc}  % footnote symbols instead of numbers
+\usepackage{movie15}  % inline figures
 \input{components/settings}
 \input{components/commands}
 
 % ## title
 \title{Title}
 \author{
-  Author\\
-  \texttt{email}
+  Author\thanks{thanks}\\
+  \texttt{email1}
+  \and
+  Author2\thanks{thanks}\\
+  \texttt{email2}
 }
 \date{}
 
@@ -18,22 +22,203 @@
 \begin{document}
   \maketitle
 
+
+  \section{Essential} \label{sec:label}
+  % ## common
+  % \tableofcontents
+  % \listoftables
+  % \listoffigures
+  % {\let\cleardoublepage\clearpage \chapter{Chapter}\label{ch:label}}
+
+  % ## annotation
+  % \listoftodos
+  \todo{\textbackslash todo}
+  \marginpar{\textbackslash marginpar}
+  \mcomment{\textbackslash mcomment}
+
+  % ## equation
+  \begin{IEEEeqnarray}{rCl}
+    \binom{n}{k}
+      &=& \frac{n!}{k!(n-k)!} \label{eq:label1}
+      \\[0.5em]
+      &=& \frac{1}{2\pi i}\oint\limits_{\Gamma} \frac{ (1+z)^n }{z^{k+1}} \ud z
+      \label{eq:label2}
+  \end{IEEEeqnarray}
+
   % ## table
-  \begin{tabular}[t]{cc}
-    \toprule
-    A & B \\
-    \midrule
-    a & b \\
-    c & d \\
-    \bottomrule
-  \end{tabular}
+  \begin{table}[h]
+    \caption{Caption}
+    \label{tab:label}
+    \centering
+    \begin{tabular}{cc}
+      \toprule
+      A & B\footnotemark \\
+      \midrule
+      a & b \\
+      c & d \\
+      \midrule
+      e & f \\
+      g & h \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \footnotetext{footnotemark--footnotetext}
 
   % ## figure
   \insertfig{death-star}{Caption for ToC}{Caption}{label}{0.2}  % `fig:label`
 
   % ## cite
-  TensorFlow \citep{tf}, \citet{tf}.
+  \noindent TensorFlow\footnote{footnote} \citep{tf}, \citet{tf}.\\
+  Section \ref{sec:label} on a page \pageref{sec:label},
+  table \ref{tab:label}, figure \ref{fig:label},
+  equations \eqref{eq:label1} and \eqref{eq:label2}.
 
+
+  \section{Other CO\texorpdfstring{\textsubscript{2}}{2}}
+
+  % ## subfigures
+  % \begin{figure}[h]
+  %   \centering
+  %   \begin{subfigure}[b]{0.5\textwidth}
+  %     \includegraphics[width=\textwidth]{death-star}
+  %     \caption{Caption 1}
+  %     \label{fig:1}
+  %   \end{subfigure}
+  %   %
+  %   \begin{subfigure}[b]{0.5\textwidth}
+  %     \includegraphics[width=\textwidth]{death-star}
+  %     \caption{Caption 2}
+  %     \label{fig:2}
+  %   \end{subfigure}
+  %   %
+  %   \begin{subfigure}[b]{0.33\textwidth}
+  %     \includegraphics[width=\textwidth]{death-star}
+  %     \caption{Caption 3}
+  %     \label{fig:3}
+  %   \end{subfigure}
+  %   %
+  %   \begin{subfigure}[b]{0.33\textwidth}
+  %     \includegraphics[width=\textwidth]{death-star}
+  %     \caption{Caption 4}
+  %     \label{fig:4}
+  %   \end{subfigure}
+  %   %
+  %   \begin{subfigure}[b]{0.33\textwidth}
+  %     \includegraphics[width=\textwidth]{death-star}
+  %     \caption{Caption 5}
+  %     \label{fig:5}
+  %   \end{subfigure}
+  % \end{figure}
+
+  \subsection*{Proof}
+    \begin{proof}[\unskip\nopunct]
+      The proof is easy and is left to a reader.
+    \end{proof}
+
+  \subsection*{Test math}
+    \begin{gather*}
+      \bra{\frac{\Psi}{1}} \; \ket{\frac{\Psi}{1}} \;
+      \braket{\frac{\Psi}{1}} \;
+      \matrixelement{n}{\prod_k U_k}{\frac{x}{1}} \;
+      \mel{n}{\prod_k U_k}{\frac{x}{1}} \\
+      \text{Normal}(\mathrm{x} \mid \mu, \sigma^2 ) \\
+      \textnormal{Normal}(\mathrm{x} \mid \mu, \sigma^2 ) \\
+      \mathrm{Normal}(\mathrm{x} \mid \mu, \sigma^2 ) \\
+      \mathcal{N}(\mathrm{x} \mid \mu, \sigma^2 ) \\
+      \sum_{\mathclap{n=-\infty}}^{+\infty} f(x) \geqslant \geq \ge \med X \\
+      \eps + \e^{-\frac{(x-2)^2}{2\sigma ^2}} + \const{} \\
+      \dot{a} \epsilon \phi \varphi \\
+      \not\propto \not\subset \not\in \notin \\
+      \equiv \doteq \approx \subset \supset \ni \mid \parallel \neq \ne \\
+      \Tr A = \tr A = \var X = \KL{P}{Q} = \DKL{P}{Q} \\
+      \star \ast \circ \bullet \oplus \otimes \odot \dagger \ddagger \text{\dag \ddag} \\
+      \bigoplus \bigotimes \bigodot \bigcup \bigcap \\
+      \leftarrow \gets \rightarrow \to \mapsto
+      \Leftarrow \Rightarrow \Longleftrightarrow \iff \overrightarrow{AB} \rightrightarrows \\
+      []\lbrack \rbrack \lbrace \rbrace \langle \rangle
+      | \vert \| \Vert \lfloor \rfloor \arrowvert \Arrowvert \\
+      \ell \emptyset \Re \Im \bot \top \angle \Box \\
+      \thicksim \thickapprox \backsim \varpropto \risingdotseq \fallingdotseq \\
+      \hbar \square \blacksquare \bigstar \varnothing
+    \end{gather*}
+
+    \begin{equation}
+      \begin{Vmatrix}
+        1 & 2 \\
+        3 & 4
+      \end{Vmatrix}
+      =
+      \abs{\oint_{A}^{B} f(z) \ud z}
+      =
+      \frac{\d u}{\d x}
+      = \mathcal{F}\mathfrak{F}
+      = \frac{\displaystyle \sum a_{ij} }{\displaystyle \sum b_{ij} }
+      = \sum_{\mathclap{\text{big long thing}}} a_k
+    \end{equation}
+
+    \begin{equation}
+      = \P{\frac{X}{\E X} \leq \epsilon}
+      = \Pr{\mathrm{Poisson}(\lambda=3) > 5}
+      = \pd{x} \cdot \pd[f]{x} \cdot \pd[f][2]{x}
+    \end{equation}
+
+    \begin{equation}
+      \o{a} \enskip
+      A \stackrel{*}{\approx} B \enskip
+      \sum_{\substack{0<i<n \\ j \neq i}}f(i) \enskip
+      \sqrt[3]{P(x)+Q(x)} \enskip
+      \frac{3}{8} \tfrac{3}{8} \dfrac{3}{8} 3/8 \enskip
+      x=x\phantom{=}x\mathbin{=}x
+    \end{equation}
+
+  \subsection*{Math fonts}
+    \begin{gather}
+      \mathrm{ABCDEFabcdef} \tag{roman} \\
+      \mathbf{ABCDEFabcdef} \tag{boldface} \\
+      \mathsf{ABCDEFabcdef} \tag{sans serif} \\
+      \mathtt{ABCDEFabcdef} \tag{typewriter} \\
+      \mathit{ABCDEFabcdef} \tag{italic} \\
+      \mathcal{ABCDEFabcdef} \tag{calligraphic} \\
+      \mathnormal{ABCDEFabcdef} \tag{normal}
+      \\[0.5em]
+      \boldsymbol{ABCabc \Gamma\Omega\Xi \gamma\omega\xi } \tag{boldsymbol} \\
+      \mathscr{ABCDEFabcdef} \tag{scr} \\
+      \mathfrak{ABCDEFabcdef} \tag{frak} \\
+      \mathbb{ABCDEFabcdef12345} \tag{bb} \\
+      \mathbbm{ABCDEFabcdef12345} \tag{bbm}
+    \end{gather}
+
+  \subsection*{Text fonts}
+    \noindent
+    \textrm{ABCDEFabcdef}  % RoMan
+    \textsf{ABCDEFabcdef}  % Sans seriF
+    \texttt{ABCDEFabcdef}  % Type wriTer
+    \\[0.5em]
+    \textmd{ABCDEFabcdef}  % MeDium
+    \textbf{ABCDEFabcdef}  % Bold Face
+    \\[0.5em]
+    \textup{ABCDEFabcdef}  % UPright
+    \textit{ABCDEFabcdef}  % ITalic
+    \textsl{ABCDEFabcdef}  % SLanted
+    \textsc{ABCDEFabcdef}  % Small Caps
+    \\[0.5em]
+    \textnormal{ABCDEFabcdef}  % document font
+    \emph{ABCDEFabcdef}    % EMPHasize
+
+  \subsection*{General formatting}
+    \begin{itemize}[noitemsep]
+      \item x \hspace{\stretch{1}} y \hspace{\stretch{1}} z \hspace*{\stretch{1}}
+      \item ``quote''
+      \item Ph.~D.
+      \item Ph.\ D.
+      \item Ph. D.
+      \item A. B
+      \item A\@. B
+      \item \verb*+yo wazup+
+    \end{itemize}
+
+  % # Bibliography
   % ## bibliography using `biblatex`
   % \setlength\bibitemsep{1.5\itemsep}
   % \printbibliography

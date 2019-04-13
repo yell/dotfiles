@@ -3,10 +3,12 @@
 
 % --- microtype ---
 \usepackage[activate={true,nocompatibility},
+            final,
             factor=1100,
             stretch=10,
-            shrink=10]{microtype}  % improve general appearance
+            shrink=10]{microtype}  % microtypography, improves general appearance
 % activate - protrusion and expansion
+% draft / final
 % factor - add 10% to the protrusion amount (default is 1000)
 % stretch / shrink - reduce stretchability/shrinkability (default is 20/20)
 
@@ -22,7 +24,7 @@
 % \usepackage{fancyhdr}  % customizing the headers and footers
 % \usepackage{quotchap}  % fancy chapter heading pages
 % \usepackage[parfill]{parskip}  % use no indentation and space between paragraphs
-\usepackage{nicefrac}  % nicer fractions
+\usepackage{nicefrac}  % nicer fractions, (compact symbols for 1/2, etc.)
 
 
 % ----------------------------
@@ -48,7 +50,7 @@
 
 % ------------------------------
 % ----- Document structure -----
-\usepackage{booktabs}  % for elegant tables
+\usepackage{booktabs}  % professional-quality, elegant tables
 \usepackage[acronym,symbols,
             nomain,nogroupskip,nonumberlist,nopostdot,  % xindy,
             toc]{glossaries}
@@ -78,7 +80,7 @@
 % --- apacite ---
 \usepackage[natbibapa]{apacite}
   \bibliographystyle{apacite}
-\usepackage[hyphens,spaces]{url}
+\usepackage[hyphens,spaces]{url}  % simple URL typesetting
 
 % --- plain natbib ---
 % \usepackage[round,sort]{natbib}
@@ -101,10 +103,10 @@
 % --- AMS facilities ---
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{amsfonts}
+\usepackage{amsfonts}  % blackboard math symbols
 \usepackage{amssymb}
-
-\usepackage{mathtools}
+\usepackage{mathrsfs}  % \mathscr
+\usepackage{mathtools}  % \mathclap ...
 \usepackage[retainorgcmds]{IEEEtrantools}  % sophisticated equation arrays
 % \usepackage{yhmath}  % extended maths fonts for LaTeX
 % \usepackage{commath}  % math delimiters of auto computed size
@@ -194,7 +196,7 @@
 % ----- Hyperref -----
 \usepackage[linktocpage,
             colorlinks=true,
-            bookmarksnumbered=true]{hyperref}
+            bookmarksnumbered=true]{hyperref}  % hyperlinks
 
 % set links colors
 \hypersetup{
@@ -221,4 +223,5 @@
 \usepackage{xspace}  % define commands that do not eat spaces
 % \usepackage{thumbpdf}  % make thumbnails
 \usepackage{todonotes}
+% \usepackage{verbatim}
 % \usepackage{fancyvrb}  % highly customisable verbatim
