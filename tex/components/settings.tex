@@ -10,11 +10,14 @@
 \usepackage{xparse}  % more flexible macros with more than one optional argument
 
 
-% # Fonts
-% \usepackage[scaled=0.8]{luximono}  % fixed-width font that supports boldface (useful for typesetting source code)
-% \usepackage[sc]{mathpazo}  % like `palatino` but not deprecated
-% \usepackage{palatino}  % ugly font [deprecated]
-\usepackage{pifont}  % special PostScript fonts (e.g. for xmark == ding{53})
+% # Document structure
+\usepackage[acronym,symbols,nomain,nogroupskip,nonumberlist,nopostdot,toc]{glossaries}
+  % * xindy - more flexible than makeindex (sudo apt install xindy)
+\usepackage{glossary-longbooktabs}
+  \newglossary[slg]{symbolslist}{syi}{syg}{Symbolslist}
+  \makeglossaries
+% \usepackage{makeidx}  % standard LaTeX package for creating indexes
+\usepackage{subfiles}
 
 
 % # Document formatting
@@ -51,14 +54,11 @@
 \usepackage{xspace}  % clever spacing for new commands (do not eat spaces)
 
 
-% # Document structure
-\usepackage[acronym,symbols,nomain,nogroupskip,nonumberlist,nopostdot,toc]{glossaries}
-  % * xindy - more flexible than makeindex (sudo apt install xindy)
-\usepackage{glossary-longbooktabs}
-  \newglossary[slg]{symbolslist}{syi}{syg}{Symbolslist}
-  \makeglossaries
-% \usepackage{makeidx}  % standard LaTeX package for creating indexes
-\usepackage{subfiles}
+% # Fonts
+% \usepackage[scaled=0.8]{luximono}  % fixed-width font that supports boldface (useful for typesetting source code)
+% \usepackage[sc]{mathpazo}  % like `palatino` but not deprecated
+% \usepackage{palatino}  % ugly font [deprecated]
+\usepackage{pifont}  % special PostScript fonts (e.g. for xmark == ding{53})
 
 
 % # Bibliography
@@ -156,6 +156,24 @@
 \def\linkcolor{tumblue}
 \def\urlcolor{darkblue}
 \def\citecolor{darkblue}
+
+
+% # Theorems environments & counters
+% \newtheorem{theorem}{Theorem}[chapter]
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{equat}[theorem]{Equation}
+% \newtheorem{example}[theorem]{Example}
+% \newtheorem{algorithm}[theorem]{Algorithm}
+% ---
+% \newtheorem{thm}{Theorem}[section]
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{definition}[theorem]{Definition}
 
 
 % # Listings
