@@ -163,7 +163,7 @@
 \newcommand{\C}{\mathbb{C}}
 
 % \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
-% \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\let\abs\relax\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 
 % --- linear algebra ---
 \let\tr\relax\DeclareMathOperator{\tr}{tr}
