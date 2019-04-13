@@ -1,12 +1,5 @@
 % -----------------------------
 % ----- General shortcuts -----
-% \renewcommand{\sf}[1]{\textsf{#1}}
-% \renewcommand{\tt}[1]{\texttt{#1}}
-% \renewcommand{\bf}[1]{\textbf{#1}}
-% \renewcommand{\sl}[1]{\textsl{#1}}
-% \renewcommand{\sc}[1]{\textsc{#1}}
-% \newcommand{\e}[1]{\emph{#1}}
-
 \renewcommand{\u}[1]{\underline{#1}}
 
 \newcommand{\gooditem}{\item[\checkmark]}
@@ -74,34 +67,6 @@
 \makeatother
 
 
-% ----------------------
-% ----- References -----
-
-% suffixes are consistent with:
-% https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
-\newcommand{\refch}[1]{chapter \ref{ch:#1}}
-\newcommand{\refsec}[1]{section \ref{sec:#1}}
-\newcommand{\refsubsec}[1]{subsection \ref{subsec:#1}}
-\newcommand{\reffig}[1]{figure \ref{fig:#1}}
-\newcommand{\reftab}[1]{table \ref{tab:#1}}
-\renewcommand{\refeq}[1]{equation \eqref{eq:#1}}
-\newcommand{\reflst}[1]{listing \ref{lst:#1}}  % code listing
-\newcommand{\refitm}[1]{\ref{itm:#1}}  % enumerated list item
-\newcommand{\refalg}[1]{algorithm \ref{alg:#1}}
-\newcommand{\refapp}[1]{appendix \ref{app:#1}}
-
-\newcommand{\refCh}[1]{Chapter \ref{ch:#1}}
-\newcommand{\refSec}[1]{Section \ref{sec:#1}}
-\newcommand{\refSubsec}[1]{Subsection \ref{subsec:#1}}
-\newcommand{\refFig}[1]{Figure \ref{fig:#1}}
-\newcommand{\refTab}[1]{Table \ref{tab:#1}}
-\newcommand{\refEq}[1]{Equation \eqref{eq:#1}}
-\newcommand{\refLst}[1]{Listing \ref{lst:#1}}  % code listing
-
-\newcommand{\refAlg}[1]{Algorithm \ref{alg:#1}}
-\newcommand{\refApp}[1]{Appendix \ref{app:#1}}
-
-
 % --------------------------------------------
 % ----- Theorems environments & counters -----
 % \newtheorem{theorem}{Theorem}[chapter]
@@ -123,13 +88,6 @@
 \renewcommand{\o}[1]{\overline{#1}}
 \newcommand{\ub}[2]{\underbrace{#1}_{#2}}
 \newcommand{\ob}[2]{\overbrace{#1}_{#2}}
-
-% --- fonts & boldness ---
-\newcommand{\bs}[1]{\boldsymbol{#1}}
-\newcommand{\mr}[1]{\mathrm{#1}}
-\newcommand{\mb}[1]{\mathbf{#1}}
-\newcommand{\mc}[1]{\mathcal{#1}}
-\newcommand{\mf}[1]{\mathfrak{#1}}
 
 % --- shortcuts to common quantities ---
 \newcommand{\half}{\frac{1}{2}}
