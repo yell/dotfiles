@@ -70,3 +70,9 @@ https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
 * `\qquad` = 2`em`
 * `\enskip` = 0.5`em`
 * `\!` = `-3/18 em`
+
+
+## math delimiter (manual) sizes
+```
+\big \Big \bigg \Bigg
+```
