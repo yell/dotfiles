@@ -2,7 +2,18 @@
 
 \input{components/settings}
 \input{components/commands}
-\input{components/math}
+\input{components/math-commands}
+
+% # ~Project-specific settings & commands
+% ## Semantic font styles
+\newcommand{\cmd}[1]{\texttt{#1}}
+% # Semantic font styles for math quantities
+% TODO: scalar, vector, matrix, tensor, dist
+% The default optimizer is \texttt{RMSProp} \textsc?
+% data-spaces \mathcal{X}, \mathcal{Y}; data \mathcal{D}
+% \newcommand{\Pth}{\mathrm{P}_{\theta}}
+% \newcommand{\Pz}{\mathrm{P}_z}
+
 
 % ## title
 \title{Title}
@@ -45,9 +56,9 @@
 
   % ## table
   \begin{table}[h]
+    \centering
     \caption{Caption}
     \label{tab:label}
-    \centering
     \begin{tabular}{cc}
       \toprule
       A & B\footnotemark \\
@@ -59,6 +70,7 @@
       g & h \\
       \bottomrule
     \end{tabular}
+    % OR caption & label here ...
   \end{table}
 
   \footnotetext{footnotemark--footnotetext}
@@ -108,7 +120,7 @@
       \label{fig:5}
     \end{subfigure}
     %
-    \caption{The caption}
+    \caption{The caption. \emph{Top}: top. \emph{Bottom}: bottom.}
     \label{fig:subfigures}
   \end{figure}
 
