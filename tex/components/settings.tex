@@ -46,6 +46,8 @@
 % \usepackage[parfill]{parskip}  % use no indentation and space between paragraphs
 % \usepackage{quotchap}  % fancy chapter heading pages
 \usepackage{rotating}  % rotation tools, including rotated full-page floats
+% \usepackage{tcolorbox}  % color box
+  % \tcbuselibrary{skins,breakable}
 % \usepackage{thmtools}  % Theorem styling
 \usepackage{titlesec}  % help with section naming
 % \usepackage{tocloft}  % ToC formatting
@@ -55,6 +57,7 @@
 
 
 % # Fonts
+% \usepackage{dsfont}
 % \usepackage[scaled=0.8]{luximono}  % fixed-width font that supports boldface (useful for typesetting source code)
 % \usepackage[sc]{mathpazo}  % like `palatino` but not deprecated
 % \usepackage{palatino}  % ugly font [deprecated]
@@ -205,6 +208,38 @@
 % 	breakatwhitespace=false,
 % 	tabsize=4
 % }
+
+% ## Matlab listings
+% \lstloadlanguages{Matlab}%
+% \lstset{language=Matlab,                        % Use MATLAB
+%         frame=single,                           % Single frame around code
+%         basicstyle=\small\ttfamily,             % Use small true type font
+%         keywordstyle=[1]\color{blue}\bf,        % MATLAB functions bold and blue
+%         keywordstyle=[2]\color{purple},         % MATLAB function arguments purple
+%         keywordstyle=[3]\color{blue}\underbar,  % User functions underlined and blue
+%         identifierstyle=,                       % Nothing special about identifiers
+%                                                 % Comments small dark green courier
+%         commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small,
+%         stringstyle=\color{purple},             % Strings are purple
+%         showstringspaces=false,                 % Don't put marks in string spaces
+%         tabsize=3,                              % 5 spaces per tab
+%         %
+%         %%% Put standard MATLAB functions not included in the default
+%         %%% language here
+%         morekeywords={xlim,ylim,var,alpha,factorial,poissrnd,normpdf,normcdf},
+%         %
+%         %%% Put MATLAB function parameters here
+%         morekeywords=[2]{on, off, interp},
+%         %
+%         %%% Put user defined functions here
+%         morekeywords=[3]{FindESS, homework_example},
+%         %
+%         morecomment=[l][\color{blue}]{...},     % Line continuation (...) like blue comment
+%         numbers=left,                           % Line numbers on left
+%         firstnumber=1,                          % Line numbers start with line 1
+%         numberstyle=\tiny\color{blue},          % Line numbers are blue
+%         stepnumber=1                        % Line numbers go in steps of 5
+%         }
 
 
 % # Algorithms (pseudocode)

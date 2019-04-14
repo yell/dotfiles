@@ -1,4 +1,5 @@
-% # LaTeX shortcuts
+% # General
+% ## LaTeX shortcuts
 \renewcommand{\l}{\left}
 \renewcommand{\r}{\right}
 \renewcommand{\o}[1]{\overline{#1}}
@@ -6,16 +7,14 @@
 \newcommand{\ob}[2]{\overbrace{#1}_{#2}}
 \newcommand{\half}{\frac{1}{2}}
 
-
-% # Better LaTeX defaults
+% ## Better LaTeX defaults
 \renewcommand{\epsilon}{\varepsilon}
 \newcommand{\eps}{\epsilon}
 \renewcommand{\kappa}{\varkappa}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
-
-% # Math delimiters with correct auto-size
+% ## Math delimiters with correct auto-size
 % * names are consistent with `matrix` environment prefixes
 \newcommand{\p}[1]{ \left( #1 \right) }
 \renewcommand{\b}[1]{ \left\lbrack #1 \right\rbrack }
@@ -23,30 +22,34 @@
 \renewcommand{\v}[1]{ \left\lvert #1 \right\rvert }
 \newcommand{\V}[1]{ \left\| #1 \right\| }
 
+% ## New delimiters
+\newcommand{\llbracket}{[\![}
+\newcommand{\rrbracket}{]\!]}
 
-% # Comments within math derivations
+% ## Comments within math derivations
 \newcommand{\commentinline}[1]{\color{darkgray}\left[\text{#1}\right]\color{black}}
 \newcommand{\commentii}[2]{\color{darkgray}\left[\begin{array}{c}\text{#1}\\\text{#2}\end{array}\right]\color{black}}
 
 
-% # Elementary math
+% # By areas of science
+% ## Elementary math
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\const}{const}
 \DeclareMathOperator{\e}{e}  % exp
 \newcommand{\ind}[1]{\mathbbm{1}_{\left\lbrace #1 \right\rbrace}}
+% \newcommand{\Id}{\ensuremath{\mathds{1}}}
 
 % \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \let\abs\relax\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
 
-
-% # Linear algebra
+% ## Linear algebra
 \let\tr\relax\DeclareMathOperator{\tr}{tr}
 \let\Tr\relax\DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\diag}{diag}
@@ -59,8 +62,7 @@
 \newcommand{\matii}[4]{\begin{array}[h]{ccc} #1 & #2 \\ #3 & #4 \end{array}}
 \newcommand{\matiii}[9]{\begin{array}[h]{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}}
 
-
-% # Calculus
+% ## Calculus
 \newcommand{\evalat}[2]{\left. #1 \right\rvert_{#2}}
 % \newcommand{\pd}[2]{ \frac{\partial #1}{\partial #2} }  % partial derivative
 \DeclareDocumentCommand{\pd}{ O{} O{} m }{\frac{\partial^{#2}#1}{\partial#3^{#2}}}  % partial derivative
@@ -69,8 +71,7 @@
 \renewcommand{\d}{\mathrm{d}}  % upright "d" for differential
 \newcommand{\ud}{\,\mathrm{d}}  % correct spacing for differential in integral
 
-
-% # Probability theory
+% ## Probability theory
 \let\var\relax\DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\med}{med}
 
@@ -79,7 +80,11 @@
 \renewcommand{\Pr}[1]{\operatorname{Pr}\left\lbrace #1 \right\rbrace}
 \newcommand{\pr}[1]{p\left( #1 \right)}
 
-
-% # Information theory
+% ## Information theory
 \newcommand{\KL}[2]{\operatorname{KL}(#1 \parallel #2)}
 \newcommand{\DKL}[2]{D_{\operatorname{KL}}(#1 \parallel #2)}
+
+% ## Computer Science
+% \newcommand{\Poly}{\ensuremath{\mathds{P}}}
+%\newcommand{\O}{\ensuremath{\mathcal{O}}}
+% \renewcommand{\O}{\ensuremath{\mathcal{O}}}

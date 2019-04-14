@@ -48,6 +48,7 @@
 
   % ## table
   \renewcommand\arraystretch{1.25}
+  % break lines within cells with fixed-width columns using `array`
 
   \begin{table}[h]
     \centering
@@ -55,7 +56,7 @@
     \label{tab:label}
     \begin{tabular}{cc}
       \toprule
-      A & B\footnotemark \\
+      A & \R \footnotemark \\
       \midrule
       a & b \\
       c & d \\
@@ -81,12 +82,14 @@
 
   \section{Other CO\texorpdfstring{\textsubscript{2}}{2}}
   \subsection*{Subfigures}
+  % use `minipage` for individual figures numbering
+
   \begin{figure}[htb]
     \centering
     %
     \begin{subfigure}[b]{.475\textwidth}
       \frame{\includegraphics[width=\textwidth]{death-star}}
-      \caption{Caption 1}
+      \caption{Caption 1}  % or \subcaption
       \label{fig:1}
     \end{subfigure}
     \hfill
@@ -125,7 +128,7 @@
 
   \subsection*{Test math}
     \begin{gather*}
-      \bra{\frac{\Psi}{1}} \; \ket{\frac{\Psi}{1}} \;
+      {\textstyle \underset{\mu}{\sum} \; \sum_{\mu}} \; \R^{n\times m}\; \bra{\frac{\Psi}{1}} \; \ket{\frac{\Psi}{1}} \;
       \braket{\frac{\Psi}{1}} \;
       \matrixelement{n}{\prod_k U_k}{\frac{x}{1}} \;
       \mel{n}{\prod_k U_k}{\frac{x}{1}} \\
