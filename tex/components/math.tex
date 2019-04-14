@@ -64,12 +64,15 @@
 
 % ## Calculus
 \newcommand{\evalat}[2]{\left. #1 \right\rvert_{#2}}
-% \newcommand{\pd}[2]{ \frac{\partial #1}{\partial #2} }  % partial derivative
-\DeclareDocumentCommand{\pd}{ O{} O{} m }{\frac{\partial^{#2}#1}{\partial#3^{#2}}}  % partial derivative
 
-% \newcommand{\pd}{\partial}  % partial differential
 \renewcommand{\d}{\mathrm{d}}  % upright "d" for differential
 \newcommand{\ud}{\,\mathrm{d}}  % correct spacing for differential in integral
+\DeclareDocumentCommand{\dd}{ O{} O{} m }{\frac{\d^{#2}#1}{\d#3^{#2}}}  % derivative
+
+\newcommand{\pd}{\partial}  % partial differential
+% \newcommand{\pdd}[2]{ \frac{\partial #1}{\partial #2} }  % partial derivative
+\DeclareDocumentCommand{\pdd}{ O{} O{} m }{\frac{\pd^{#2}#1}{\pd#3^{#2}}}  % partial derivative
+
 
 % ## Probability theory
 \let\var\relax\DeclareMathOperator{\var}{var}

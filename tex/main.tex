@@ -165,14 +165,16 @@
       = \mathcal{F}\mathfrak{F}
       = \frac{\displaystyle \sum a_{ij} }{\displaystyle \sum b_{ij} }
       = \sum_{\mathclap{\text{big long thing}}} a_k
+      = \frac{\displaystyle \P{\frac{X}{\E X} \leq \epsilon}}
+             {\displaystyle \Pr{\mathrm{Poisson}(\lambda=3) > 5}}
     \end{equation}
 
     \begin{equation}
-      = \frac{\displaystyle \P{\frac{X}{\E X} \leq \epsilon}}
-             {\displaystyle \Pr{\mathrm{Poisson}(\lambda=3) > 5}}
-      = \pd{x} \cdot \pd[f]{x} \cdot \pd[f][2]{x}
-      = \evalat{\pd{x}\frac{x^2+1}{x^3+1}}{x=0}
-      = \evalat{\frac{\d}{\ud x}\frac{x^2+1}{x^3+1}}{x=0}
+      \pd \cdot \pdd{x} \cdot \pdd[f]{x} \cdot \pdd[f][3]{x}
+      \cdot \evalat{\pdd{x}\frac{x^2+1}{x^3+1}}{x=0}
+      =
+      \d \cdot \dd{x} \cdot \dd[f]{x} \cdot \dd[f][3]{x}
+      \cdot \evalat{\dd{x}\frac{x^2+1}{x^3+1}}{x=0}
     \end{equation}
 
     \begin{equation}
