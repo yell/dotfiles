@@ -1,4 +1,4 @@
-% # General
+% # Formatting
 % ## LaTeX shortcuts
 \renewcommand{\l}{\left}
 \renewcommand{\r}{\right}
@@ -30,8 +30,14 @@
 \newcommand{\commentinline}[1]{\color{darkgray}\left[\text{#1}\right]\color{black}}
 \newcommand{\commentii}[2]{\color{darkgray}\left[\begin{array}{c}\text{#1}\\\text{#2}\end{array}\right]\color{black}}
 
+% ## Problem elements
+% TODO: redesign
+\newcommand{\answer}[2][2]{\rule{#1cm}{0.4pt}\begin{flalign*}\left\{#2\right\}&&\end{flalign*}}
+\newcommand{\answertext}[2][2]{\rule{#1cm}{0.4pt}\\\{#2\}}
+\newcommand{\subproblem}[1]{\color{darkgray}\textit{\textbf{\underline{#1}}}\color{black}}
 
-% # By areas of science
+
+% # Operators and other objects
 % ## Elementary math
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
@@ -59,7 +65,7 @@
 \newcommand{\veciii}[3]{\begin{array}[h]{c} #1 \\ #2 \\ #3 \end{array}}
 \newcommand{\veciv}[4]{\begin{array}[h]{c} #1 \\ #2 \\ #3 \\ #4	\end{array}}
 
-\newcommand{\matii}[4]{\begin{array}[h]{ccc} #1 & #2 \\ #3 & #4 \end{array}}
+\newcommand{\matii}[4]{\begin{array}[h]{cc} #1 & #2 \\ #3 & #4 \end{array}}
 \newcommand{\matiii}[9]{\begin{array}[h]{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}}
 
 % ## Calculus
