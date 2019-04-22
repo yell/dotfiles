@@ -40,8 +40,8 @@ https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
 * `tab:` - table
 * `eq:` - equation
 * `lst:` - code listing
-* `itm:` - algorithm
-* `alg:` - enumerated list item
+* `itm:` - enumerated list item
+* `alg:` - algorithm
 * `app:` - appendix
 
 
