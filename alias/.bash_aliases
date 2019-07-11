@@ -68,12 +68,12 @@ alias nd='nvidia-docker'
 alias ndr='nvidia-docker run'
 
 ## python
-alias p='python'
-alias p2='p'
-alias py='p'
-alias py2='p'
+alias p='python3'
+alias p2='python2'
+alias py='python2'
+alias py2='python2'
 alias p3='python3'
-alias py3='p3'
+alias py3='python3'
 alias jp='jupyter notebook'
 
 ## other programming languages
