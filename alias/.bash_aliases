@@ -1,5 +1,5 @@
 ## general shortcuts
-alias a='sudo apt-get'
+alias a='sudo apt'
 alias c='clear'  # clear screen
 alias df='df -H'
 alias du='s du -sbh'  # size
