@@ -75,6 +75,7 @@ alias py2='python2'
 alias p3='python3'
 alias py3='python3'
 alias jp='jupyter notebook'
+alias python='python3'
 
 ## other programming languages
 alias r='Rscript'
