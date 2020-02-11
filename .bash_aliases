@@ -9,6 +9,7 @@ alias i='sudo apt install'
 alias k='kill'
 alias s='sudo'
 alias t='top'
+alias u='sudo apt update'
 alias P="PS1='$ '"  # minimize the default shell prompt
 alias ll='ls -lah'
 alias su='sudo -i'
@@ -46,6 +47,7 @@ alias copy='xsel -ib'  # usage: ... | copy
 ## python
 alias p='python3'
 alias p3='python3'
+alias piu='pip3 install --user'
 
 ## r-lang
 alias r='Rscript'
