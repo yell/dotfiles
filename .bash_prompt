@@ -1,0 +1,47 @@
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+}
+
+build_and_echo_prompt() {
+	# colors: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+	# hex codes for those colors: https://askubuntu.com/questions/821157/print-a-256-color-test-pattern-in-the-terminal
+	# sublime color codes: https://marketplace.visualstudio.com/items?itemName=SuperPaintman.monokai-extended
+	local _SUBLIME_RED="\[\e[38;5;198m\]"      # F9 26 72 -> FF 00 87
+	local _SUBLIME_ORANGE="\[\e[38;5;208m\]"   # FD 91 1F -> FF 87 00
+	local _SUBLIME_YELLOW="\[\e[38;5;222m\]"   # E6 DB 74 -> FF D7 87
+	local _SUBLIME_YELLOW2="\[\e[38;5;228m\]"  # E6 DB 74 -> FF FF 87
+	local _SUBLIME_GREEN="\[\e[38;5;155m\]"    # A6 E2 2E -> AF FF 5F
+	local _SUBLIME_BLUE="\[\e[38;5;81m\]"      # 66 D9 EF -> 5F D7 FF
+	local _SUBLIME_PURPLE="\[\e[38;5;141m\]"   # AE 81 FF -> AF 87 FF		
+
+	local _user_host_color_default="\[\033[01;32m\]"
+	local _dir_color_default="\[\033[01;34m\]"
+	local _default="\[\033[00m\]"
+
+	local _user_host_color="${_SUBLIME_GREEN}" 
+	local _dir_color="${_SUBLIME_PURPLE}"
+	local _git_branch_color="${_SUBLIME_RED}"
+
+	local _ps1_prefix='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}'
+
+	local color_prompt=
+	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+	    color_prompt=yes
+	fi
+
+	if [ "$color_prompt" = yes ]; then
+		local _prompt="${_ps1_prefix}\
+${_user_host_color}\u@\h${_default} \
+${_dir_color}\w${_default}\
+${_git_branch_color}$(parse_git_branch)${_default}\$ "
+	else
+		local _prompt="${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ "
+	fi
+
+	echo "${_prompt}"
+}
+
+build_and_echo_prompt
