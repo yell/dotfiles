@@ -2,6 +2,7 @@
 
 ## shortcuts
 alias a='sudo apt'
+alias b='source ~/.bashrc'
 alias c='clear'  # clear screen
 alias g='grep'
 alias h='history'
