@@ -36,7 +36,9 @@ alias .5='cd ../../../../../'
 
 ## date/time
 alias now='date +"%T"'
+alias T='date +"%T"'
 alias today='date +"%Y%m%d"'
+alias D='date +"%Y%m%d"'
 
 ## useful custom commands
 alias copy='xsel -ib'  # usage: ... | copy
@@ -64,6 +66,7 @@ alias tb='tensorboard --logdir'
 
 ## virtual environment
 alias v='source .venv/bin/activate'
+alias dv='deactivate'
 
 ## git
 alias ga='git add'
