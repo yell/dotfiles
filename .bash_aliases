@@ -2,7 +2,6 @@
 
 ## shortcuts
 alias a='sudo apt'
-alias b='source ~/.bashrc'
 alias c='clear'  # clear screen
 alias g='grep'
 alias h='history'
@@ -72,12 +71,24 @@ alias dv='deactivate'
 ## git
 alias ga='git add'
 alias gb='git branch'
-alias gc='git commit -m'
-alias gl='git log'
+alias gba='git branch -a'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gch='git checkout'
+alais gcb='git checkout -b'
+alias gcl='git clean'
+alias gl='git log --oneline --graph --decorate'
+alias gL='git log -p'
 alias gs='git status'
+alias gd='diff --color-words --ws-error-highlight=new,old'
+alias gds='diff --staged --ws-error-highlight=new,old'
+alias gdt='git difftool'
+alias gm='git merge'
+alias gmt='git mergetool'
 alias gdiff='git diff'
 alias gpull='git pull'
 alias gpush='git push'
+
 
 ## docker
 alias d='docker'
