@@ -14,6 +14,7 @@ alias P="PS1='$ '"  # minimize the default shell prompt
 alias ll='ls -lah'
 alias su='sudo -i'
 alias sz='sudo du -sbh'  # size
+alias copy='xsel -ib'  # usage: ... | copy
 
 ## default behaviour redefinition
 alias cp='cp -i'  # confirmation
@@ -39,9 +40,6 @@ alias now='date +"%T"'
 alias T='date +"%T"'
 alias today='date +"%Y%m%d"'
 alias D='date +"%Y%m%d"'
-
-## useful custom commands
-alias copy='xsel -ib'  # usage: ... | copy
 
 
 ### programming languages
