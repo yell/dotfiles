@@ -2,7 +2,8 @@
 set -e
 
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+    # git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+    git rev-parse --abbrev-ref HEAD
 }
 
 build_and_echo_prompt() {
@@ -35,13 +36,16 @@ build_and_echo_prompt() {
 	    color_prompt=yes
 	fi
 
+	# local _branch="$(parse_git_branch)"
+	local _branch="\$(__git_ps1 ' [%s]')"
+
 	if [ "$color_prompt" = yes ]; then
 		local _prompt="${_ps1_prefix}\
 ${_user_host_color}\u@\h${_default} \
 ${_dir_color}\w${_default}\
-${_git_branch_color}$(parse_git_branch)${_default}\$ "
+${_git_branch_color}${_branch}${_default}\$ "
 	else
-		local _prompt="${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ "
+		local _prompt="${debian_chroot:+($debian_chroot)}\u@\h:\w${_branch}\$ "
 	fi
 
 	echo "${_prompt}"
