@@ -3,12 +3,10 @@
     email = yell.bondarenko@gmail.com
     username = yell
 
-
 [core]
     autocrlf = input  ; leave CRLF endigs in Win checkouts, but LF on Mac/Linux and in the repo
     filemode = false  ; don't trust file modes
     pager = less -R
-
 
 [color]
     branch = auto
@@ -35,7 +33,6 @@
     changed = yellow
     untracked = red
 
-
 [push]
     default = simple  ; push only the current branch (not all of them)
 
@@ -52,7 +49,6 @@
 
 [log]
     date = short
-
 
 [alias]
     ls = ls-files
