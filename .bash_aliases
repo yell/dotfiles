@@ -71,30 +71,47 @@ alias dv='deactivate'
 ## git
 alias ga='git add'
 alias gaa='git add --all'
+
 alias gb='git branch'
 alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gbdd='git branch -D'
+alias gbr='git branch -r'
+
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
+alias gca='git commit --amend'
+
 alias gch='git checkout'
 alias gcb='git checkout -b'
+
+alias gcp='git cherry-pick'
+
 alias gcl='git clean'
 
-alias gl='git log'
-alias glp='git log -p'
-alias glg='git log --oneline --graph --decorate --all'
-alias gls='git log --stat --summary'
-
-alias gs='git status'
-alias gd='git diff --color-words --ws-error-highlight=new,old'
+alias gd='git diff'
+alias gdc='git diff --color-words --ws-error-highlight=new,old'
 alias gds='git diff --staged --ws-error-highlight=new,old'
 alias gdt='git difftool'
+
+alias gl='git log'
+alias glo='git log --oneline'
+alias glg='git log --oneline --graph --decorate'
+alias glp='git log -p'
+alias gls='git log --stat --summary'
+
 alias gm='git merge'
 alias gmt='git mergetool'
-alias gt='git tag -l'
-alias gdiff='git diff'
-alias gpull='git pull'
-alias gpush='git push'
+
+alias gpl='git pull'
+alias gps='git push'
+
+alias gs='git status'
+alias gst='git status -sb'
+
+alias gt='git tag'
+alias gtl='git tag -l'
 
 
 ## docker
