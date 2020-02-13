@@ -1,0 +1,61 @@
+[user]
+    name = Yelysei Bondarenko
+    email = yell.bondarenko@gmail.com
+    username = yell
+
+
+[core]
+    autocrlf = input  ; leave CRLF endigs in Win checkouts, but LF on Mac/Linux and in the repo
+    filemode = false  ; don't trust file modes
+    pager = less -R
+
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    showbranch = auto
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = cyan
+
+[color "diff"]
+    meta = yellow
+    # frag = magenta
+    frag = cyan
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+
+[push]
+    default = simple  ; push only the current branch (not all of them)
+
+[diff]
+    algorithm = patience
+    tool = meld
+
+[difftool]
+    prompt = false
+
+[merge]
+    conflictstyle = diff3
+    tool = meld
+
+[log]
+    date = short
+
+
+[alias]
+    ls = ls-files
+    uncommit = reset --soft HEAD^
+    unc = reset --soft HEAD^
+    unstage = reset HEAD --
