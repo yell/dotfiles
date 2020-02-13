@@ -83,7 +83,8 @@ alias gca='git commit --amend'
 
 alias gch='git checkout'
 alias gcb='git checkout -b'
-alias gcl='git clean'
+alias gcl='git clone'
+alias gcn='git clean'
 alias gcp='git cherry-pick'
 
 alias gd='git diff'
