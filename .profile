@@ -1,2 +1,1 @@
-# locale variables
-export LC_COLLATE=C
+export LC_COLLATE=C  # respect special symbols in file explorer sort
