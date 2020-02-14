@@ -48,6 +48,7 @@ alias D='date +"%Y%m%d"'
 alias p='python3'
 alias p3='python3'
 alias piu='pip3 install --user'
+alias pif='pip3 freeze | grep'
 
 ## r-lang
 alias r='Rscript'
