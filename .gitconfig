@@ -51,6 +51,8 @@
     date = short
 
 [alias]
+    bd = branch -d
+    bdd = branch -D
     ch = checkout
     ls = ls-files
     uncommit = reset --soft HEAD^
