@@ -51,6 +51,7 @@
     date = short
 
 [alias]
+    ch = checkout
     ls = ls-files
     uncommit = reset --soft HEAD^
     unc = reset --soft HEAD^
