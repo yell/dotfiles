@@ -60,6 +60,7 @@ alias R='Rscript'
 ## jupyter notebook
 alias jp='jupyter notebook'
 alias jpd='jupyter notebook --no-browser --allow-root'
+alias jpl='jupyter notebook list'
 
 ## tensorboard
 alias tb='tensorboard --logdir'
