@@ -40,8 +40,9 @@ build_and_echo_prompt() {
 	local _branch="\$(__git_ps1 ' [%s]')"
 
 	if [ "$color_prompt" = yes ]; then
+		# \u@\h
 		local _prompt="${_ps1_prefix}\
-${_user_host_color}\u@\h${_default} \
+${_user_host_color}▴${_default} \
 ${_dir_color}\w${_default}\
 ${_git_branch_color}${_branch}${_default}\$ "
 	else
