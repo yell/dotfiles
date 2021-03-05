@@ -1,4 +1,5 @@
 all:
+	chmod u+x .bash_prompt
 	cp .bash_aliases ~
 	cp .bash_prompt ~
 	cp .gitconfig ~
